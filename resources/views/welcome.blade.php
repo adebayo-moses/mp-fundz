@@ -75,7 +75,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Kingdom Come: Deliverance Funny Moments and Fails</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">newfox media</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">newfox media</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>686K views .<small class="posted_dt">1 week ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -93,7 +93,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">DR DISRESPECT - Before They Were Famous - Twitch Streamer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Eros Now</a> </h4>
+                                        <h4><a href="#" title="">Eros Now</a> </h4>
                                         <span>283K views .<small class="posted_dt">3 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -111,7 +111,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Top Perectly Timed Twitch Moments 2017 #7</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Animal Planet</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">Animal Planet</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>2.6M views .<small class="posted_dt">2 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -129,7 +129,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Top 5 Amazing Bridge Block ever in PUBG</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Maketzi</a> </h4>
+                                        <h4><a href="#" title="">Maketzi</a> </h4>
                                         <span>612K views .<small class="posted_dt">5 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -147,7 +147,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Trailer Park Boys Season 12 - Official Trailer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">ScereBro</a> </h4>
+                                        <h4><a href="#" title="">ScereBro</a> </h4>
                                         <span>45K views .<small class="posted_dt">3 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -165,7 +165,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">A day in the life of a Google software engineer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">MathChief</a> </h4>
+                                        <h4><a href="#" title="">MathChief</a> </h4>
                                         <span>86K views .<small class="posted_dt">6 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -183,7 +183,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Avengers: Infinity War - Gym Workout motivation 2019</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">RealLifeLore</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">RealLifeLore</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>144K views .<small class="posted_dt">6 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -201,7 +201,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">How the Universe Works - The Milky Way Galaxy - Space</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Loskes</a></h4>
+                                        <h4><a href="#" title="">Loskes</a></h4>
                                         <span>408K views .<small class="posted_dt">19 hours ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -230,7 +230,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Kingdom Come: Deliverance Funny Moments and Fails</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">newfox media</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">newfox media</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>686K views .<small class="posted_dt">1 week ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -248,7 +248,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">DR DISRESPECT - Before They Were Famous - Twitch Streamer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Eros Now</a> </h4>
+                                        <h4><a href="#" title="">Eros Now</a> </h4>
                                         <span>283K views .<small class="posted_dt">3 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -266,7 +266,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Top Perectly Timed Twitch Moments 2017 #7</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Animal Planet</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">Animal Planet</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>2.6M views .<small class="posted_dt">2 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -284,7 +284,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Top 5 Amazing Bridge Block ever in PUBG</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Maketzi</a> </h4>
+                                        <h4><a href="#" title="">Maketzi</a> </h4>
                                         <span>612K views .<small class="posted_dt">5 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -302,7 +302,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Trailer Park Boys Season 12 - Official Trailer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">ScereBro</a> </h4>
+                                        <h4><a href="#" title="">ScereBro</a> </h4>
                                         <span>45K views .<small class="posted_dt">3 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -320,7 +320,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">A day in the life of a Google software engineer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">MathChief</a> </h4>
+                                        <h4><a href="#" title="">MathChief</a> </h4>
                                         <span>86K views .<small class="posted_dt">6 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -338,7 +338,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Avengers: Infinity War - Gym Workout motivation 2019</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">RealLifeLore</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">RealLifeLore</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>144K views .<small class="posted_dt">6 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -356,7 +356,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">How the Universe Works - The Milky Way Galaxy - Space</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Loskes</a></h4>
+                                        <h4><a href="#" title="">Loskes</a></h4>
                                         <span>408K views .<small class="posted_dt">19 hours ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -385,7 +385,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Kingdom Come: Deliverance Funny Moments and Fails</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">newfox media</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">newfox media</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>686K views .<small class="posted_dt">1 week ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -403,7 +403,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">DR DISRESPECT - Before They Were Famous - Twitch Streamer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Eros Now</a> </h4>
+                                        <h4><a href="#" title="">Eros Now</a> </h4>
                                         <span>283K views .<small class="posted_dt">3 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -421,7 +421,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Top Perectly Timed Twitch Moments 2017 #7</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Animal Planet</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">Animal Planet</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>2.6M views .<small class="posted_dt">2 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -439,7 +439,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Top 5 Amazing Bridge Block ever in PUBG</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Maketzi</a> </h4>
+                                        <h4><a href="#" title="">Maketzi</a> </h4>
                                         <span>612K views .<small class="posted_dt">5 months ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -457,7 +457,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Trailer Park Boys Season 12 - Official Trailer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">ScereBro</a> </h4>
+                                        <h4><a href="#" title="">ScereBro</a> </h4>
                                         <span>45K views .<small class="posted_dt">3 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -475,7 +475,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">A day in the life of a Google software engineer</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">MathChief</a> </h4>
+                                        <h4><a href="#" title="">MathChief</a> </h4>
                                         <span>86K views .<small class="posted_dt">6 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -493,7 +493,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">Avengers: Infinity War - Gym Workout motivation 2019</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">RealLifeLore</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                                        <h4><a href="#" title="">RealLifeLore</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                         <span>144K views .<small class="posted_dt">6 days ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
@@ -511,7 +511,7 @@
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
                                         <h3><a href="#" title="">How the Universe Works - The Milky Way Galaxy - Space</a></h3>
-                                        <h4><a href="Single_Channel_Home.html" title="">Loskes</a></h4>
+                                        <h4><a href="#" title="">Loskes</a></h4>
                                         <span>408K views .<small class="posted_dt">19 hours ago</small></span>
                                     </div>
                                 </div><!--videoo end-->
