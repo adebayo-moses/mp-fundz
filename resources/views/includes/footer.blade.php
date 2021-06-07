@@ -12,7 +12,7 @@
                         <h3 class="widget-title">pages</h3>
                         <ul class="pages-link">
                             <li><a href="#" title="">About</a></li>
-                            <li><a href="#" title="">Privacy</a></li>
+                            <li><a href="#" title="">Privacy policy</a></li>
                             <li><a href="#" title="">Terms</a></li>
                         </ul>
                     </div>
