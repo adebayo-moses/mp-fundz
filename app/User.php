@@ -29,6 +29,34 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
     ];
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | FUNCTIONS
+    |--------------------------------------------------------------------------
+    */
+
+    /*
+    |--------------------------------------------------------------------------
+    | RELATIONS
+    |--------------------------------------------------------------------------
+    */
+
+    public function country()
+    {
+        return $this->belongsTo('App\Models\Country');
+    }
+
+    public function videos()
+    {
+        return $this->hasMany('App\Models\Video');
+    }
+
+    public function withdrawals()
+    {
+        return $this->hasMany('App\Models\Withdrawal');
+    }
+
     /**
      * A user has a referrer.
      *

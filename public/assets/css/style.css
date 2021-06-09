@@ -858,6 +858,19 @@ svg:hover path {
 	padding: 0 6px;
 	background: rgba(38, 38, 54, 0.9);
 }
+
+.vid-point {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 21px;
+    line-height: 21px;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 0 6px;
+    background: rgba(38, 38, 54, 0.9);
+}
+
 .video_info {
 	width: 100%;
 	margin-top: 14px;
