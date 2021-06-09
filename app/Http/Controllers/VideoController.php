@@ -81,7 +81,7 @@ class VideoController extends Controller
 
         $video->countries()->attach($request->receive_views_from);
 
-        return redirect()->route('videos.index');
+        return redirect()->route('home');
     }
 
     /**
