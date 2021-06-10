@@ -11,22 +11,27 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script type="text/javascript">
-    // var token = '70b79478fbc5f3e41cebac634ef14093';
     var playing = false;
     var fullyPlayed = false;
     var interval = '';
     var played = 0;
     var length = document.getElementById('player').getAttribute("exposure");
-
     var videoId = document.getElementById('player').getAttribute("video_id");
-    // var response = '86';
 
 
     var player, playing = false;
+
+    //Get height and width of the video from css
+    const element = document.querySelector('.vid-pr');
+    const style = getComputedStyle(element);
+    const height = style.height //The height
+    const width = style.width //The width
+
+
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-            height: '585',
-            width: '847.5',
+            height: height,
+            width: width,
             videoId: videoId,
             events: {
                 'onStateChange': onYouTubePlayerStateChange
@@ -47,16 +52,6 @@
     }
 
     function YouTubePlayed() {
-        // $.ajax({
-        //     type: "POST",
-        //     url: "system/gateways/video.php",
-        //     data: "data=" + response + "&token=" + token,
-        //     success: function(a) {
-        //         $('#status').html(a);
-        //         $('#countdown').html('<a href="?page=videos" style="font-weight:600;color:red"><b>WATCH ANOTHER VIDEO HERE</b></a>');
-        //     }
-        // })
-
         $.ajax({
             method: "POST",
             headers: {
@@ -66,11 +61,6 @@
             // data: data,
             processData: false,
             contentType: false,
-            // beforeSend: function(){
-            //     $('#account-add-form button[type=submit]').attr('disabled', true);
-            //     $('#account-add-form button[type=submit] #request').hide();
-            //     $("#spinner").show();
-            // },
             success: (res) => {
                 Swal.fire(
                     "Success!",
@@ -87,15 +77,8 @@
                     Object.keys(errors).forEach(function (key) {
                         $("#" + key + "Error").text(errors[key][0]);
                     });
-                } else {
-                    // window.location.reload();
                 }
             },
-            // complete: function() {
-            //     $('#account-add-form button[type=submit]').attr('disabled', false);
-            //     $('#account-add-form button[type=submit] #request').show();
-            //     $("#spinner").hide();
-            // },
         });
     }
 

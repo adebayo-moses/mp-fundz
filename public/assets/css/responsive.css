@@ -64,6 +64,10 @@
 	.abt-mk .info-pr-sec {margin-bottom: 10px;}
 	.vid-pr iframe {height: 400px;}
 	.mn-sec.full_wdth_single_video .vid-pr iframe {height: 420px;}
+
+    .vid-pr {
+        height: auto;
+    }
 }
 
 @media (max-width: 991px) {
