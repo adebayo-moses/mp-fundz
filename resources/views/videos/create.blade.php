@@ -68,19 +68,28 @@
                                     @endforeach --}}
 
                                     <option value="10">
-                                        Mini (10 Seconds)
+                                        10 Seconds
                                     </option>
                                     <option value="20">
-                                        Short (20 Seconds)
+                                        20 Seconds
                                     </option>
                                     <option value="30">
-                                        Standard (30 Seconds)
+                                        30 Seconds
                                     </option>
                                     <option value="60">
-                                        Long (60 Seconds)
+                                        60 Seconds
                                     </option>
                                     <option value="90">
-                                        Extra Long (90 Seconds)
+                                        90 Seconds
+                                    </option>
+                                    <option value="120">
+                                       120 Seconds
+                                    </option>
+                                    <option value="150">
+                                       150 Seconds
+                                    </option>
+                                    <option value="180">
+                                       180 Seconds
                                     </option>
                                 </select>
 
