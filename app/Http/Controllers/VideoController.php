@@ -92,7 +92,7 @@ class VideoController extends Controller
      */
     public function show($id)
     {
-        $video = Video::find($id)->first();
+        $video = Video::find($id);
 
         return view('videos.show')->with('video', $video);
     }
@@ -132,11 +132,11 @@ class VideoController extends Controller
     }
 
     public function addPoint() {
-        $user = User::find(Auth::id())->first();
+        $user = User::find(Auth::id());
 
         $coin_balance = $user->coin_balance;
 
-        $updated_coin_balance = $coin_balance + 5.00;
+        $updated_coin_balance = $coin_balance + 10.00;
 
         if(User::where('id', Auth::user()->id)->update([
             'coin_balance' => $updated_coin_balance
