@@ -36,13 +36,7 @@
                     <span>
                         <i class="icon-fire"></i>
                     </span>
-                    <a href="#" title="">New Videos</a>
-                </li>
-                <li>
-                    <span>
-                        <i class="icon-subscriptions"></i>
-                    </span>
-                    <a href="#" title="">Subscriptions</a>
+                    <a href="{{route('home')}}" title="">New Videos</a>
                 </li>
             </ul>
         </div><!--sd_menu end-->
@@ -61,22 +55,16 @@
                     </span>
                     <a href="#" title="">Watch Later</a>
                 </li>
-                <li>
-                    <span>
-                        <i class="icon-like"></i>
-                    </span>
-                    <a href="#" title="">Liked Videos</a>
-                </li>
             </ul>
         </div><!--sd_menu end-->
         <div class="sd_menu">
             <ul class="mm_menu">
-                <li>
+                {{-- <li>
                     <span>
                         <i class="icon-settings"></i>
                     </span>
                     <a href="#" title="">Settings</a>
-                </li>
+                </li> --}}
                 <li>
                     <span>
                         <i class="icon-logout"></i>

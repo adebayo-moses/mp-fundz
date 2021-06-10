@@ -256,6 +256,7 @@
 	body.overlay .wrapper {display: none; }
 	.controls-lv > li {display: none;}
 	.controls-lv > li.user-log {display: block; padding-right: 23px;}
+	.controls-lv > li.coins {display: block; margin-right: 20px;}
 	.controls-lv > li.icon-menu-log {display: block; margin-left: 2rem;}
 	.controls-lv > li.login-area {display: block; margin-right: 20px;}
 	nav ul li {padding-top: 0;margin-bottom: 10px;}
