@@ -19,8 +19,15 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Videos
 Route::resources([
     'videos' => 'VideoController',
 ]);
 
 Route::post('/video/add_point', 'VideoController@addPoint')->name('videos.points');
+
+//Users
+Route::get('user/videos', 'UserController@my_videos')->name('user.videos');
+Route::get('user/profile', 'UserController@profile')->name('user.profile');
+
+Route::post('password/change', 'Auth\ChangePasswordController@change')->name('password.change');

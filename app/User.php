@@ -27,6 +27,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'subscribed_to_news_letter',
         'referrer_id',
         'password',
+        'last_login_at',
+        'created_at',
     ];
 
 
@@ -93,6 +95,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'created_at' => 'datetime',
     ];
 
 
@@ -113,4 +116,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->referral_link = route('register', ['ref' => $this->username]);
     }
+
+
+    // public function getCreatedAtAttribute($value)
+    // {
+    //     return date('M d, Y', strtotime($this->created_at));
+    // }
 }

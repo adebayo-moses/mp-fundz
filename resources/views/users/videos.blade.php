@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    <title>My Videos | MP Fundz</title>
+@endsection
 @section('main')
 
 @include('includes.side_menu')
@@ -8,7 +10,7 @@
     <div class="vidz-row">
         <div class="container">
             <div class="vidz_sec">
-                <h3>All Videos</h3>
+                <h3>My Videos</h3>
                 <div class="vidz_list">
                     <div class="row">
                         @foreach ($videos as $video)
@@ -20,7 +22,7 @@
                                             {{-- <div id="status"></div>
                                             <div id="countdown">Must play this video for <b><span id="played">0</span>/10 seconds</b></div>
                                             <div id="player"></div> --}}
-                                            <span class="vid-point">10 points</span>
+                                            <span class="vid-point">5 points</span>
                                             <span class="vid-time">10:21</span>
                                             <span class="watch_later">
                                                 <i class="icon-watch_later_fill"></i>

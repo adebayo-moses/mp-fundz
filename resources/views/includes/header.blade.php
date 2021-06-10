@@ -62,7 +62,7 @@
                                             <span>
                                                 <i class="icon-user"></i>
                                             </span>
-                                            <a href="#" title="">Profile</a>
+                                            <a href="{{route('user.profile')}}" title="">Profile</a>
                                         </li>
                                         <li>
                                             <span>
@@ -80,14 +80,14 @@
                                             <span>
                                                 <i class="icon-subscriptions"></i>
                                             </span>
-                                            <a href="#" title="">My Videos</a>
+                                            <a href="{{route('user.videos')}}" title="">My Videos</a>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <span>
                                                 <i class="icon-settings"></i>
                                             </span>
                                             <a href="#" title="">Settings</a>
-                                        </li>
+                                        </li> --}}
                                         <li>
                                             <span>
                                                 <i class="icon-logout"></i>
