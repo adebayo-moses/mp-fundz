@@ -68,14 +68,12 @@
                                         <div class="vid_thumbainl">
                                             <a href="{{route('videos.show', ['video' => $video->id])}}" title="">
                                                 <img src="https://img.youtube.com/vi/{{$video->video_id}}/hqdefault.jpg" alt="">
-                                                {{-- <div id="status"></div>
-                                                <div id="countdown">Must play this video for <b><span id="played">0</span>/10 seconds</b></div>
-                                                <div id="player"></div> --}}
-                                                <span class="vid-point">5 points</span>
-                                                <span class="vid-time">10:21</span>
-                                                <span class="watch_later">
+                                                <span class="vid-point">Reward:</span>
+                                                <span class="vid-time">7 Coins</span>
+                                                <span class="watch_later" style="color: orangered;">{{$video->check_history ? 'Watched' : ''}}</span>
+                                                {{-- <span class="watch_later">
                                                     <i class="icon-watch_later_fill"></i>
-                                                </span>
+                                                </span> --}}
                                             </a>
                                         </div><!--vid_thumbnail end-->
                                         <div class="video_info">

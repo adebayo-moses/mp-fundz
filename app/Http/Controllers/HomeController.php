@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $videos = Video::all();
+        $videos = Video::orderBy('id', 'DESC')->get();
 
         return view('home')->with('videos', $videos);
     }

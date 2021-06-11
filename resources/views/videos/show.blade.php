@@ -121,7 +121,7 @@
             <div class="col-lg-9 mx-lg-auto">
                 <div class="mn-vid-sc single_video">
                     @if ($video->check_history)
-                        <h3 class="mb-4" style="color: red;">You've watched this video, and you won't be rewarded anymore!</h3>
+                        <h3 class="mb-4" style="color: red;">You've watched this video, and you won't be rewarded anymore! <span style="color: black;"><a href="{{route('home')}}">Make More Money</a></span></h3>
                     @else
                     <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn 10 points</b></h3>
                     @endif

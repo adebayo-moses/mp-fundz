@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function index() {
 
-        $videos = Video::all();
+        $videos = Video::orderBy('id', 'DESC')->get();
 
         return view('welcome')->with('videos', $videos);
     }

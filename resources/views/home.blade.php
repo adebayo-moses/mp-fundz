@@ -18,7 +18,7 @@
                                         <a href="{{route('videos.show', ['video' => $video->id])}}" title="">
                                             <img src="https://img.youtube.com/vi/{{$video->video_id}}/hqdefault.jpg" alt="">
                                             <span class="vid-point">Reward:</span>
-                                            <span class="vid-time">7 points</span>
+                                            <span class="vid-time">7 Coins</span>
                                             <span class="watch_later" style="color: orangered;">{{$video->check_history ? 'Watched' : ''}}</span>
                                             {{-- <span class="watch_later">
                                                 <i class="icon-watch_later_fill"></i>
