@@ -822,15 +822,16 @@ svg:hover path {
 	display: inline-block;
 	position: absolute;
 	top: 7px;
-	right: 0;
-	width: 30px;
-	height: 30px;
+	left: 2px;
+    padding: 2px 5px;
+	/* width: 30px;
+	height: 30px; */
 	background-color: #414346;
-	line-height: 30px;
+	line-height: 25px;
 	color: #fff;
 	text-align: center;
-	opacity: 0;
-	visibility: hidden;
+	/* opacity: 0; */
+	/* visibility: hidden; */
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;

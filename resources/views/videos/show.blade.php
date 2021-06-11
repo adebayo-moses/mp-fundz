@@ -18,6 +18,10 @@
     var length = document.getElementById('player').getAttribute("exposure");
     var videoId = document.getElementById('player').getAttribute("video_id");
 
+    var retrievedVideo = document.getElementById('player').getAttribute("video");
+
+    var data = new FormData();
+    data.append("video", retrievedVideo);
 
     var player, playing = false;
 
@@ -58,18 +62,20 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: "{{route('videos.points')}}",
-            // data: data,
+            data: data,
             processData: false,
             contentType: false,
             success: (res) => {
-                Swal.fire(
-                    "Success!",
-                    res.message,
-                    'success'
-                ).then(function() {
-                });
+                if(res.success == 'success') {
+                    Swal.fire(
+                        "Success!",
+                        res.message,
+                        'success'
+                    ).then(function() {
+                    });
+                    $('#countdown').html('<a href="{{route('home')}}" style="font-weight:600;color:red"><b>MAKE MORE MONEY HERE</b></a>');
+                }
 
-                $('#countdown').html('<a href="{{route('home')}}" style="font-weight:600;color:red"><b>WATCH ANOTHER VIDEO HERE</b></a>');
             } ,
             error: (response) => {
                 if(response.status === 422) {
@@ -111,11 +117,14 @@
         <div class="row">
             <div class="col-lg-9 mx-lg-auto">
                 <div class="mn-vid-sc single_video">
-                    {{-- <h3 class="mb-3">{{$video->title}}</h3> --}}
-                    <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn 10 points</b></h3>
+                    @if ($video->check_history)
+                        <h3 class="mb-4" style="color: red;">You've watched this video, and you won't be rewarded anymore!</h3>
+                    @else
+                        <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn 10 points</b></h3>
+                    @endif
                     <div class="vid-1">
                         <div class="vid-pr">
-                            <div id="player"  video_id="{{$video->video_id}}" exposure={{$video->exposure}}></div>
+                            <div id="player"  video_id="{{$video->video_id}}" exposure={{$video->exposure}} video="{{$video->id}}"></div>
                         </div><!--vid-pr end-->
                         <div class="vid-info">
                             <h3>{{$video->title}}</h3>

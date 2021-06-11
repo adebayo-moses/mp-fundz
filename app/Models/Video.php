@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Video extends Model
 {
@@ -46,6 +47,11 @@ class Video extends Model
         return $this->belongsToMany('App\Models\Country');
     }
 
+    public function histories()
+    {
+        return $this->hasMany('App\Models\VideoHistory');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES
@@ -63,7 +69,13 @@ class Video extends Model
      *
      * @var array
      */
-    protected $appends = ['video_id'];
+    protected $appends = ['video_id', 'check_history'];
+
+    //Check if loggedin user has watched this video
+    public function getCheckHistoryAttribute() {
+
+        return $this->check_history = $this->histories()->where('user_id', Auth::id())->count();
+    }
 
 
     public function getVideoIdAttribute()

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Country;
 use App\Models\Video;
 use App\Models\VideoCategory;
+use App\Models\VideoHistory;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -131,23 +132,35 @@ class VideoController extends Controller
         //
     }
 
-    public function addPoint() {
+    public function addPoint(Request $request) {
+
         $user = User::find(Auth::id());
 
-        $coin_balance = $user->coin_balance;
+        $user_record_for_this_video = VideoHistory::where('video_id', $request->input('video'))->where('user_id', $user->id)->first();
 
-        $updated_coin_balance = $coin_balance + 10.00;
+        if($user_record_for_this_video === null){
+            $coin_balance = $user->coin_balance;
 
-        if(User::where('id', Auth::user()->id)->update([
-            'coin_balance' => $updated_coin_balance
-        ])) {
-            // return redirect('user/trade/giftcards/index')->with('success', 'Your withdrawal request is successfully initiated, kindly wait for response from our disbursement team, it takes less than 10 minutes.');
-            return response()->json(
-                [
-                    'success' => true,
-                    'message' => 'Great! you have successfully earned 10 points'
-                ]
-            );
-        };
+            $updated_coin_balance = $coin_balance + 10.00;
+
+            if($user->update([
+                'coin_balance' => $updated_coin_balance
+            ])) {
+
+                VideoHistory::create([
+                    'user_id' => $user->id,
+                    'video_id' => $request->input('video'),
+                ]);
+
+                return response()->json(
+                    [
+                        'success' => true,
+                        'message' => 'Great! you have successfully earned 10 points'
+                    ]
+                );
+            }
+        }
+
+
     }
 }

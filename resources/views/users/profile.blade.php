@@ -18,7 +18,7 @@
                 <div class="sidebar">
                     <div class="widget video_info pr sp">
                         <span class="vc_hd">
-                            <img src="images/resources/sn.png" alt="">
+                            <img src="{{asset('assets/images/resources/user-img.png')}}" alt="">
                         </span>
                         <h4>{{Auth::user()->first_name . ' ' . Auth::user()->last_name}}</h4>
                         <p>since: {{Auth::user()->created_at->format('F d, Y')}} </p>
@@ -58,7 +58,7 @@
                                 @foreach ($latest_videos as $video)
                                     <div class="row">
                                         <div class="col-xl-8 col-lg-9 col-md-9 col-sm-12">
-                                            <div class="tab-history acct_page">
+                                            <div class="tab-history acct_page mb-2">
                                                 <div class="videoo">
                                                     <div class="vid_thumbainl ms br">
                                                         <a href="{{route('videos.show', ['video' => $video->id])}}" title="Video detail">
@@ -83,7 +83,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-3 col-md-3 col-sm-12">
-                                            <div class="icon-list">
+                                            <div class="icon-list mb-2">
                                                 <ul>
                                                     <li><a href="#" title=""><i class="icon-play"></i></a></li>
                                                     <li><a href="#" title=""><i class="icon-pencil"></i></a></li>

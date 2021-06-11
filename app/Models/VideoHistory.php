@@ -33,14 +33,9 @@ class VideoHistory extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function user()
+    public function video()
     {
-        return $this->belongsTo('App\User');
-    }
-
-    public function countries()
-    {
-        return $this->belongsToMany('App\Models\Country');
+        return $this->belongsTo('App\Models\Video');
     }
 
     /*
@@ -54,26 +49,6 @@ class VideoHistory extends Model
     | ACCESSORS
     |--------------------------------------------------------------------------
     */
-
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array
-     */
-    protected $appends = ['video_id'];
-
-
-    public function getVideoIdAttribute()
-    {
-        $url = $this->path;
-
-        preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match);
-
-        $video_id = $match[1];
-
-        // dd($video_id);
-        return $video_id;
-    }
 
     /*
     |--------------------------------------------------------------------------
