@@ -19,6 +19,7 @@
     var videoId = document.getElementById('player').getAttribute("video_id");
 
     var retrievedVideo = document.getElementById('player').getAttribute("video");
+    var watchedVideo = document.getElementById('player').getAttribute("watched");
 
     var data = new FormData();
     data.append("video", retrievedVideo);
@@ -56,36 +57,38 @@
     }
 
     function YouTubePlayed() {
-        $.ajax({
-            method: "POST",
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            url: "{{route('videos.points')}}",
-            data: data,
-            processData: false,
-            contentType: false,
-            success: (res) => {
-                if(res.success == 'success') {
-                    Swal.fire(
-                        "Success!",
-                        res.message,
-                        'success'
-                    ).then(function() {
-                    });
-                    $('#countdown').html('<a href="{{route('home')}}" style="font-weight:600;color:red"><b>MAKE MORE MONEY HERE</b></a>');
-                }
+        if (watchedVideo == 0) {
+            $.ajax({
+                method: "POST",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{route('videos.points')}}",
+                data: data,
+                processData: false,
+                contentType: false,
+                success: (res) => {
+                    if(res) {
+                        Swal.fire(
+                            "Success!",
+                            res.message,
+                            'success'
+                        ).then(function() {
+                        });
+                        $('#countdown').html('<a href="{{route('home')}}" style="font-weight:600;color:red"><b>MAKE MORE MONEY HERE</b></a>');
+                    }
 
-            } ,
-            error: (response) => {
-                if(response.status === 422) {
-                    let errors = response.responseJSON.errors;
-                    Object.keys(errors).forEach(function (key) {
-                        $("#" + key + "Error").text(errors[key][0]);
-                    });
-                }
-            },
-        });
+                } ,
+                error: (response) => {
+                    if(response.status === 422) {
+                        let errors = response.responseJSON.errors;
+                        Object.keys(errors).forEach(function (key) {
+                            $("#" + key + "Error").text(errors[key][0]);
+                        });
+                    }
+                },
+            });
+        }
     }
 
     function onYouTubePlayerReady(a) {
@@ -120,11 +123,11 @@
                     @if ($video->check_history)
                         <h3 class="mb-4" style="color: red;">You've watched this video, and you won't be rewarded anymore!</h3>
                     @else
-                        <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn 10 points</b></h3>
+                    <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn 10 points</b></h3>
                     @endif
                     <div class="vid-1">
                         <div class="vid-pr">
-                            <div id="player"  video_id="{{$video->video_id}}" exposure={{$video->exposure}} video="{{$video->id}}"></div>
+                            <div id="player"  video_id="{{$video->video_id}}" exposure={{$video->exposure}} video="{{$video->id}}" watched={{$video->check_history}}></div>
                         </div><!--vid-pr end-->
                         <div class="vid-info">
                             <h3>{{$video->title}}</h3>

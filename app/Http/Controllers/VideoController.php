@@ -141,7 +141,7 @@ class VideoController extends Controller
         if($user_record_for_this_video === null){
             $coin_balance = $user->coin_balance;
 
-            $updated_coin_balance = $coin_balance + 10.00;
+            $updated_coin_balance = $coin_balance + 7.00;
 
             if($user->update([
                 'coin_balance' => $updated_coin_balance
