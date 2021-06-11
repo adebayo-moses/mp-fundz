@@ -67,6 +67,7 @@ class VideoController extends Controller
             'daily_limit' => 'required',
         ]);
 
+        $status = Auth::user()->username == 'kunleadeoye' ? 'active' : 'pending';
 
         //Validated
         $video = Video::create([
@@ -77,6 +78,7 @@ class VideoController extends Controller
             'published' => true,
             'exposure' => $request->input('exposure'),
             'daily_limit' => $request->input('daily_limit'),
+            'status' => $status,
             // 'receive_views_from' => $request->input('receive_views_from')
         ]);
 
