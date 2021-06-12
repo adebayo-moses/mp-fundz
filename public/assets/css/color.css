@@ -14,16 +14,16 @@
 .more-ch:hover,
 .lnks li a:hover,
 .search_form form button:hover {
-	color:#4878f2;
+	color:#b28300;
 }
 
 .vid_thums li a svg:hover rect,
 .more_items_sec svg:hover path {
-	fill:#4878f2;
+	fill:#b28300;
 }
 
 
 .pr_links:before,
 .mm_menu .switch input:checked + .slider {
-	background-color:#4878f2;
+	background-color:#b28300;
 }

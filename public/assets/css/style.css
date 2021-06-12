@@ -78,7 +78,7 @@ ul {
 }
 a:hover {
 	text-decoration: none;
-	color: #b55133;
+	color: #b28300;
 }
 blockquote, q {
 	quotes: none;
@@ -156,7 +156,7 @@ nav ul li a:hover,
 .info-sr h3:hover,
 .social-links li a:hover,
 .pages-link li a:hover {
-	color: #b55133;
+	color: #b28300;
 }
 .vcp_inf.pc form button:hover,
 button:hover,
@@ -166,7 +166,7 @@ button:hover,
 .ch-pswd button:hover,
 .controls-lv li a.btn-default:hover {
 	color: #fff;
-	background-color: #b55133;
+	background-color: #b28300;
 }
 .container {
 	max-width: 1170px;
@@ -412,7 +412,7 @@ header .container {
 	display: inline-block;
 	color: #ffffff;
 	font-size: 16px;
-	background-color: #272626;
+	background-color: #b28300;
 	height: 38px;
 	line-height: 38px;
 	padding: 0 30px;
@@ -966,7 +966,7 @@ svg:hover path {
 }
 
 .btm_bar_content::-webkit-scrollbar-thumb {
-  background-color: #e8a32c;
+  background-color: #9b9488;
   outline: 1px solid #e8a32c;
 }
 
@@ -2142,7 +2142,7 @@ strong {
 	margin-bottom: 0;
 }
 .link-pr ul li a {
-	color: #b55133;
+	color: #b28300;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 23px;
@@ -2642,7 +2642,7 @@ strong {
 	width: 100%;
 	color: #fff;
 	font-size: 16px;
-	background-color: #272626;
+	background-color: #b28300;
 	font-weight: 500;
 }
 .check_bar {
@@ -4681,7 +4681,7 @@ header.hp_1 .side_links li.user_contrl {
 }
 .form-text p a {
 	display: inline-block;
-	color: #b55133;
+	color: #b28300;
 }
 
 
