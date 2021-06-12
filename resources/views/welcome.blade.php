@@ -91,11 +91,13 @@
         </div><!--vidz-row end-->
     </section><!--vds-main end-->
 
-    <section class="more_items_sec text-center">
-        <div class="container">
-            <a href="{{route('register')}}" title="" class="btn-default">Join Now</a>
-        </div>
-    </section><!--more_items_sec end-->
+    @guest
+        <section class="more_items_sec text-center">
+            <div class="container">
+                <a href="{{route('register')}}" title="" class="btn-default">Join Now</a>
+            </div>
+        </section><!--more_items_sec end-->
+    @endguest
 
 
 @endsection
