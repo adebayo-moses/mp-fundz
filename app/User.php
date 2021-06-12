@@ -24,6 +24,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'country',
         'user_type',
         'coin_balance',
+        'refferal_revenue',
         'subscribed_to_news_letter',
         'referrer_id',
         'password',
@@ -105,7 +106,7 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
-    protected $appends = ['referral_link'];
+    protected $appends = ['referral_link', 'total_coin_balance'];
 
     /**
      * Get the user's referral link.
@@ -118,8 +119,8 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
 
-    // public function getCreatedAtAttribute($value)
-    // {
-    //     return date('M d, Y', strtotime($this->created_at));
-    // }
+    public function getTotalCoinBalanceAttribute()
+    {
+        return $this->total_coin_balance = $this->coin_balance + $this->refferal_revenue;
+    }
 }

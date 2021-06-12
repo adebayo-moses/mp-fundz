@@ -29,5 +29,6 @@ Route::post('/video/add_point', 'VideoController@addPoint')->name('videos.points
 //Users
 Route::get('user/videos', 'UserController@my_videos')->name('user.videos');
 Route::get('user/profile', 'UserController@profile')->name('user.profile');
+Route::get('user/refferal', 'UserController@refferal')->name('user.refferal');
 
 Route::post('password/change', 'Auth\ChangePasswordController@change')->name('password.change');

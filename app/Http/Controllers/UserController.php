@@ -33,4 +33,9 @@ class UserController extends Controller
 
         return view('users.profile')->with('latest_videos', $latest_videos);
     }
+
+    public function refferal() {
+
+        return view('users.refferal');
+    }
 }

@@ -84,7 +84,7 @@ class VideoController extends Controller
 
         $video->countries()->attach($request->receive_views_from);
 
-        return redirect()->route('home')->with('success', 'Great! Your video is submitted for review, we\'ll get back to you soon.');
+        return redirect()->route('home')->with('success', 'Great! Your video is submitted for review, we\'ll get back to you via your email soon.');
     }
 
     /**
@@ -149,6 +149,20 @@ class VideoController extends Controller
                 'coin_balance' => $updated_coin_balance
             ])) {
 
+                //If user has a refferal, credit refferal with 10% (0.07 coins)
+                if($user->referrer->count()) {
+
+                    //Get the revenue of the referrer
+                    $the_refferal_revenue = $user->referrer->refferal_revenue;
+
+                    //Add the bonue
+                    $total_referrer_revenue = $the_refferal_revenue + 0.07;
+
+                    //Add the bonus to db
+                    $user->referrer->update(['refferal_revenue' => $total_referrer_revenue]);
+                }
+
+                //Create watch history
                 VideoHistory::create([
                     'user_id' => $user->id,
                     'video_id' => $request->input('video'),

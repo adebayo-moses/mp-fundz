@@ -1522,11 +1522,11 @@ svg:hover path {
 	background-color: #e2ebef;
 }
 .video-file{
-	width: 350px;
+	width: 500px;
 	margin: 0 auto;
 	text-align:center;
 	/*border-right:1px solid #363643;*/
-	padding: 196px 0 210px;
+	padding: 70px 0 210px;
 }
 .upload-videooz i {
 	color: #000;
@@ -1544,7 +1544,7 @@ svg:hover path {
 	font-size: 16px;
 }
 .upload-videooz form {
-	margin-top: 64px;
+	margin-top: 44px;
 }
 .upload-videooz form label,
 .youtube-dwn form button {
@@ -1566,7 +1566,7 @@ svg:hover path {
 	width: 370px;
 	margin: 0 auto;
 	text-align:center;
-	padding:196px 0 210px;
+	padding: 70px 0 210px;
 }
 .youtube-dwn form{
 	position:relative;
