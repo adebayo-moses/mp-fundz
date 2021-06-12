@@ -121,6 +121,6 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function getTotalCoinBalanceAttribute()
     {
-        return $this->total_coin_balance = $this->coin_balance + $this->refferal_revenue;
+        return $this->total_coin_balance = (float) ((float) $this->coin_balance + (float) $this->refferal_revenue);
     }
 }
