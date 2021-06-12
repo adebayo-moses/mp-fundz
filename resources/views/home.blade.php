@@ -9,6 +9,11 @@
         <div class="container">
             <div class="vidz_sec">
                 <h3>All Videos</h3>
+                @if (session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <div class="vidz_list">
                     <div class="row">
                         @foreach ($videos as $video)

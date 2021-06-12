@@ -84,7 +84,7 @@ class VideoController extends Controller
 
         $video->countries()->attach($request->receive_views_from);
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Great! Your video is submitted for review, we\'ll get back to you soon.');
     }
 
     /**
