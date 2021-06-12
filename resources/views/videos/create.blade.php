@@ -177,7 +177,7 @@
     <div class="container">
         <div class="sgst_content">
             <h3>Help & Suggestions</h3>
-            <p>By submitting your videos to ProjectFitnessTV, you acknowledge that you agree to ProjectFitnessTV’s<a href="#" title=""> Terms of Service</a>and<a href="#" title="">Community Guidelines</a>. Please be sure not to violate others’ copyright or privacy rights.<a href="#"> Learn more</a></p>
+            <p>By submitting your videos to MP Fundz, you acknowledge that you agree to MP Fundz’s<a href="#" title=""> Terms of Service</a>and<a href="#" title="">Community Guidelines</a>. Please be sure not to violate others’ copyright or privacy rights.<a href="#"> Learn more</a></p>
         </div>
     </div>
 </section><!--Suggestions end-->
