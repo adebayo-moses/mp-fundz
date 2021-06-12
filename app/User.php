@@ -97,7 +97,6 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
         'created_at' => 'datetime',
-        // 'total_coin_balance' => 'decimal',
     ];
 
 
@@ -120,8 +119,8 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
 
-    // public function getTotalCoinBalanceAttribute()
-    // {
-    //     return (float) $this->total_coin_balance = (float) ((float) $this->coin_balance + (float) $this->refferal_revenue);
-    // }
+    public function getTotalCoinBalanceAttribute()
+    {
+        return (float) $this->total_coin_balance = (float) ((float) $this->coin_balance + (float) $this->refferal_revenue);
+    }
 }
