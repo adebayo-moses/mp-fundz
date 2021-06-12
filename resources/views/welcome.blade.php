@@ -67,7 +67,7 @@
                                     <div class="videoo">
                                         <div class="vid_thumbainl">
                                             <a href="{{route('videos.show', ['video' => $video->id])}}" title="">
-                                                <img src="https://img.youtube.com/vi/{{$video->video_id}}/hqdefault.jpg" alt="">
+                                                <img src="https://img.youtube.com/vi/{{$video->video_id}}/hqdefault.jpg" alt="{{$video->title}}" />
                                                 <span class="vid-point">Reward:</span>
                                                 <span class="vid-time">7 Coins</span>
                                                 <span class="watch_later" style="color: orangered;">{{$video->check_history ? 'Watched' : ''}}</span>
