@@ -13,4 +13,9 @@ class PagesController extends Controller
 
         return view('welcome')->with('videos', $videos);
     }
+
+    public function contact() {
+
+        return view('pages.contact');
+    }
 }

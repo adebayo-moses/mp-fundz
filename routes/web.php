@@ -29,6 +29,7 @@ Route::post('/video/add_point', 'VideoController@addPoint')->name('videos.points
 //Users
 Route::get('user/videos', 'UserController@my_videos')->name('user.videos');
 Route::get('user/profile', 'UserController@profile')->name('user.profile');
+Route::get('pages/contact', 'PagesController@contact')->name('pages.contact');
 Route::get('user/refferal', 'UserController@refferal')->name('user.refferal');
 Route::get('user/history/watch', 'UserController@watch_history')->name('user.watch_history');
 

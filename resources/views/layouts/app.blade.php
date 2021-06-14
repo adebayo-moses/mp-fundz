@@ -18,9 +18,9 @@
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/fontello-codes.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/thumbs-embedded.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/color.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css')}}">
 
         <script type="text/javascript">
             $('#tooltip').tooltip(options);

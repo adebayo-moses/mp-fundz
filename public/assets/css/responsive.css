@@ -27,6 +27,9 @@
 	.mn-sec.full_wdth_single_video .vid-pr iframe {height: 497px;}
 }
 @media (max-width: 1200px) {
+    .contact-form {
+        width: 95%;
+    }
 	.search_form {width: 35%;}
 	/*.vid_status {margin-top: 10px;width: 100%;}*/
 	.menu_logo {width: 30%;}

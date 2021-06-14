@@ -22,7 +22,7 @@
                         <h3 class="widget-title">Links</h3>
                         <ul class="pages-link">
                             <li><a href="#" title="">Blog</a></li>
-                            <li><a href="#" title="">Contact</a></li>
+                            <li><a href="{{route('pages.contact')}}" title="Contact Us">Contact</a></li>
                             <li><a href="#" title="">Donate</a></li>
                         </ul>
                     </div>

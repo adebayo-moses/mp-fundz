@@ -91,6 +91,27 @@
                                     <option value="180">
                                        180 Seconds
                                     </option>
+                                    <option value="300">
+                                       300 Seconds
+                                    </option>
+                                    <option value="400">
+                                       400 Seconds
+                                    </option>
+                                    <option value="500">
+                                       500 Seconds
+                                    </option>
+                                    <option value="600">
+                                       600 Seconds
+                                    </option>
+                                    <option value="700">
+                                       700 Seconds
+                                    </option>
+                                    <option value="900">
+                                       900 Seconds
+                                    </option>
+                                    <option value="1200">
+                                       1200 Seconds
+                                    </option>
                                 </select>
 
                                 @error('exposure')
