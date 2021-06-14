@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Video;
+use App\Models\VideoHistory;
 // use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,5 +38,12 @@ class UserController extends Controller
     public function refferal() {
 
         return view('users.refferal');
+    }
+
+    public function watch_history() {
+
+        $video_history = VideoHistory::where('user_id', Auth::id())->orderBy('id', 'DESC')->get();
+
+        return view('users.watch_history')->with('video_history', $video_history);
     }
 }

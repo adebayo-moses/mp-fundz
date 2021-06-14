@@ -106,7 +106,7 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
-    protected $appends = ['referral_link', 'total_coin_balance'];
+    protected $appends = ['referral_link', 'total_coin_balance', 'amount_in_dollars'];
 
     /**
      * Get the user's referral link.
@@ -122,5 +122,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getTotalCoinBalanceAttribute()
     {
         return (float) $this->total_coin_balance = (float) ((float) $this->coin_balance + (float) $this->refferal_revenue);
+    }
+
+    public function getAmountInDollarsAttribute()
+    {
+        return $this->amount_in_dollars =  ((float) $this->coin_balance) / 100;;
     }
 }

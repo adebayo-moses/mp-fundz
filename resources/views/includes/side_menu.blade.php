@@ -47,7 +47,7 @@
                     <span>
                         <i class="icon-history"></i>
                     </span>
-                    <a href="#" title="">Watch History</a>
+                    <a href="{{ route('user.watch_history') }}" title="Watch history">Watch History</a>
                 </li>
                 <li>
                     <span>

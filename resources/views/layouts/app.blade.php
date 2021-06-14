@@ -22,6 +22,10 @@
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/color.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css')}}">
 
+        <script type="text/javascript">
+            $('#tooltip').tooltip(options);
+        </script>
+
         @yield('css')
     </head>
 
