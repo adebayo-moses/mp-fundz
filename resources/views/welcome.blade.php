@@ -14,7 +14,7 @@
                 <h2>Watch, earn and upload unlimited content</h2>
                 <a href="{{route('register')}}" title="">Create my account</a>
             </div><!--banner-text end-->
-            <h3 class="headline">Video of the Day by <a href="#" title="">kunleadeoye</a></h3>
+            <h3 class="headline">Video of the Day by <a href="#" title="">Admin</a></h3>
         </div>
     </section><!--banner-section end-->
 
@@ -79,7 +79,7 @@
                                         <div class="video_info">
                                             <h3><a href="#" title="">{{$video->title}}</a></h3>
                                             {{-- <h4><a href="#" title="">{{$video->user->username}}</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4> --}}
-                                            <span><a href="#" title="">By: {{$video->user->username}}</a> <span class="verify_ic"><i class="icon-tick"></i></span>&nbsp; &nbsp; &nbsp; <small class="posted_dt">{{\Carbon\Carbon::parse($video->created_at)->diffForHumans()}}</small></span>
+                                            <span><a href="#" title="">By: Admin</a> <span class="verify_ic"><i class="icon-tick"></i></span>&nbsp; &nbsp; &nbsp; <small class="posted_dt">{{\Carbon\Carbon::parse($video->created_at)->diffForHumans()}}</small></span>
                                         </div>
                                     </div><!--videoo end-->
                                 </div>

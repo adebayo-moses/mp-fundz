@@ -71,7 +71,7 @@
                                                     </div><!--vid_thumbnail end-->
                                                     <div class="video_info ms br">
                                                         <h3><a href="{{route('videos.show', ['video' => $video->id])}}" title="">{{$video->title}}</a></h3>
-                                                        <h4><a href="#" title="">By: {{$video->user->username}}</a></h4>
+                                                        <h4><a href="#" title="">By: Admin</a></h4>
                                                         <span>283K views . {{\Carbon\Carbon::parse($video->created_at)->diffForHumans()}}</span>
                                                         <ul>
                                                             {{-- <li><span class="br-1">Inactive</span></li> --}}
