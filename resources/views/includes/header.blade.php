@@ -107,9 +107,9 @@
                                 </div><!--sd_menu end-->
                             </div>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{route('videos.create')}}" class="btn-default">Promote Video</a>
-                        </li>
+                        </li> --}}
                         <li class="icon-menu-log">
                             <a href="#" title="" class="menu">
                                 <i class="icon-menu"></i>

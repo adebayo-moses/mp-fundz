@@ -14,7 +14,7 @@
                 <h2>Watch, earn and upload unlimited content</h2>
                 <a href="{{route('register')}}" title="">Create my account</a>
             </div><!--banner-text end-->
-            <h3 class="headline">Video of the Day by <a href="#" title="">Admin</a></h3>
+            {{-- <h3 class="headline">Video of the Day by <a href="#" title="">Admin</a></h3> --}}
         </div>
     </section><!--banner-section end-->
 
