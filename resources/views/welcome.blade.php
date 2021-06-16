@@ -22,14 +22,14 @@
         <div class="container">
             <div class="services-row">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="col-lg-4 mx-lg-auto col-md-6 col-sm-6 col-12">
                         <div class="service-col">
                             <img src="{{asset('assets/images/sv1.png')}}" alt="">
                             <h3>Get paid watching videos</h3>
                             <p>Make money from the comfort of your home catching cruise with videos</p>
                         </div><!--service-col end-->
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    {{-- <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="service-col">
                             <img src="{{asset('assets/images/sv2.png')}}" alt="">
                             <h3>Grow your audience/business</h3>
@@ -42,8 +42,8 @@
                             <h3>Simple transfer from YouTube</h3>
                             <p>Upload your videos from YouTube with an easy link copy/paste.</p>
                         </div><!--service-col end-->
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    </div> --}}
+                    <div class="col-lg-4 mx-lg-auto col-md-6 col-sm-6 col-12">
                         <div class="service-col">
                             <img src="{{asset('assets/images/sv4.png')}}" alt="">
                             <h3>Make money with Us </h3>
