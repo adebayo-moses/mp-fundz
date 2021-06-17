@@ -1,4 +1,5 @@
 <header>
+    @include('includes.adsense')
     <div class="top_bar">
         <div class="container">
             <div class="top_header_content d-flex justify-content-between">
@@ -75,13 +76,13 @@
                                             <span>
                                                 <i class=" icon-add_to_playlist"></i>
                                             </span>
-                                            <a href="{{route('videos.create')}}">Promote Video</a>
+                                            <a href="{{route('user.account.add')}}">Add Account</a>
                                         </li>
                                         <li>
                                             <span>
-                                                <i class="icon-subscriptions"></i>
+                                                <i class="icon-paid_sub"></i>
                                             </span>
-                                            <a href="{{route('user.videos')}}" title="">My Videos</a>
+                                            <a href="{{route('user.account.withdraw')}}" title="">Withdraw Money</a>
                                         </li>
                                         {{-- <li>
                                             <span>
@@ -106,6 +107,9 @@
                                     </ul>
                                 </div><!--sd_menu end-->
                             </div>
+                        </li>
+                        <li>
+                            <a href="{{route('user.account.withdraw')}}" class="btn-default">Withdraw</a>
                         </li>
                         {{-- <li>
                             <a href="{{route('videos.create')}}" class="btn-default">Promote Video</a>

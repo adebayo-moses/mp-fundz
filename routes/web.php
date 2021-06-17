@@ -33,4 +33,10 @@ Route::get('pages/contact', 'PagesController@contact')->name('pages.contact');
 Route::get('user/refferal', 'UserController@refferal')->name('user.refferal');
 Route::get('user/history/watch', 'UserController@watch_history')->name('user.watch_history');
 
+//Accont
+Route::get('user/account/index', 'AccountController@index')->name('user.account.index');
+Route::get('user/account/add', 'AccountController@add')->name('user.account.add');
+Route::get('user/account/withdraw', 'AccountController@withdraw')->name('user.account.withdraw');
+Route::post('user/account/store', 'AccountController@store')->name('user.account.store');
+
 Route::post('password/change', 'Auth\ChangePasswordController@change')->name('password.change');
