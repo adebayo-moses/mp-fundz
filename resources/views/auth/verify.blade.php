@@ -84,7 +84,7 @@
 		 	<div class="hd-lg">
                 <h1 class="mb-4">Hi,  {{Auth::user()->first_name}}</h1>
 
-                <h6 class="mb-3">A fresh verification link has been sent to your email address. Before proceeding, please check your email for a verification link. If you did not receive the email,</h6>
+                <h6 class="mb-3">A fresh verification link has been sent to your email address (check your spam folder if you did't get it in your primary email). Before proceeding, please check your email for a verification link. If you did not receive the email,</h6>
 
 
                 <form method="POST" action="{{ route('verification.resend') }}">

@@ -172,7 +172,7 @@ class VideoController extends Controller
                 return response()->json(
                     [
                         'success' => true,
-                        'message' => 'Great! you have successfully earned 10 points'
+                        'message' => 'Great! you have successfully earned 7 points'
                     ]
                 );
             }
