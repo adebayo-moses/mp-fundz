@@ -25,7 +25,7 @@
 
 <section class="suggestions">
     <div class="container">
-        <div class="row col-lg-10 mx-auto">
+        <div class="row col-12 col-lg-10 mx-lg-auto">
 
             <div class="sgst_content mt-5">
                 <h3>Hello, {{Auth::user()->first_name . ' ' . Auth::user()->last_name}}</h3>
