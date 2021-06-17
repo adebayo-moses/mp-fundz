@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use Notifiable;
 
     /**
