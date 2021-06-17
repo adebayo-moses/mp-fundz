@@ -151,7 +151,7 @@ class VideoController extends Controller
 
                 //If user has a refferal, credit refferal with 10% (0.07 coins)
 
-                if($user->referrer !== null) {
+                if($user->referrer) {
 
                     //Get the revenue of the referrer
                     $the_refferal_revenue = $user->referrer->refferal_revenue;
