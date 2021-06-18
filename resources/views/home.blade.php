@@ -8,7 +8,8 @@
     <div class="vidz-row">
         <div class="container">
             <div class="vidz_sec">
-                <h3>All Videos</h3>
+                @include('includes.adsense2')
+                <h3 class="mt-3">All Videos</h3>
                 @if (session('success'))
                     <div class="alert alert-success" role="alert">
                         {{ session('success') }}
@@ -25,9 +26,6 @@
                                             <span class="vid-point">Reward:</span>
                                             <span class="vid-time">7 Coins</span>
                                             <span class="watch_later" style="color: orangered;">{{$video->check_history ? 'Watched' : ''}}</span>
-                                            {{-- <span class="watch_later">
-                                                <i class="icon-watch_later_fill"></i>
-                                            </span> --}}
                                         </a>
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">

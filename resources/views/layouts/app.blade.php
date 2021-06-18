@@ -35,8 +35,6 @@
         <div class="wrapper hp_1">
             @include('includes.header')
 
-            {{-- @include('includes.side_menu') --}}
-
 
             @yield('main')
 

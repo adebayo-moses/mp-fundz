@@ -59,6 +59,7 @@
         <div class="vidz-row">
             <div class="container">
                 <div class="vidz_sec">
+                    @include('includes.adsense2')
                     <h3>All Videos</h3>
                     <div class="vidz_list">
                         <div class="row">

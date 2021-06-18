@@ -1,28 +1,19 @@
 <header>
-    @include('includes.adsense')
+    @include('includes.adsense1')
     <div class="top_bar">
         <div class="container">
             <div class="top_header_content d-flex justify-content-between">
                 <div class="menu_logo">
                     <a href="{{url('/')}}" title="" class="logo">
-                        <img src="{{asset('assets/images/logo.png')}}" alt="MP Funds Logo">
+                        <img src="{{asset('assets/images/logo.png')}}" alt="MP Funds Logo" />
                     </a>
                 </div><!--menu_logo end-->
                 @guest
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif --}}
                     <ul class="controls-lv">
                         <li><a href="{{url('/')}}" title="">Home</a></li>
                         <li><a href="#" title="">About us</a></li>
                         <li><a href="#" title="">How it works</a></li>
                         <li><a href="Single_Channel_Home.html" title="">Contact</a></li>
-                        {{-- <li><a href="Single_Channel_Home.html" title="">FAQ</a></li> --}}
                         <li class="icon-menu-log d-flex d-sm-none mr-0">
                             <a href="#" title="" class="menu" style="font-size: 23px">
 								<i class="icon-menu"></i>
@@ -84,12 +75,6 @@
                                             </span>
                                             <a href="{{route('user.account.withdraw')}}" title="">Withdraw Money</a>
                                         </li>
-                                        {{-- <li>
-                                            <span>
-                                                <i class="icon-settings"></i>
-                                            </span>
-                                            <a href="#" title="">Settings</a>
-                                        </li> --}}
                                         <li>
                                             <span>
                                                 <i class="icon-logout"></i>
@@ -111,35 +96,14 @@
                         <li>
                             <a href="{{route('user.account.withdraw')}}" class="btn-default">Withdraw</a>
                         </li>
-                        {{-- <li>
-                            <a href="{{route('videos.create')}}" class="btn-default">Promote Video</a>
-                        </li> --}}
                         <li class="icon-menu-log">
                             <a href="#" title="" class="menu">
                                 <i class="icon-menu"></i>
                             </a>
                         </li>
                     </ul><!--controls-lv end-->
-                    {{-- <div class="clearfix"></div> --}}
                 @endguest
             </div><!--top_header_content end-->
         </div>
     </div><!--header_content end-->
-    {{-- @auth
-        <div class="btm_bar">
-            <div class="container" style="max-width: 1170px; padding-right: 15px; padding-left: 15px;">
-                <div class="btm_bar_content">
-                    <nav>
-                        <ul>
-                            <li><a href="Browse_Categories.html" title="">Categories</a></li>
-                            <li><a href="Browse_Channels.html" title="">Brands</a></li>
-                            <li><a href="#" title="">New Videos</a></li>
-                            <li><a href="#" title="">Movies</a></li>
-                        </ul>
-                    </nav><!--navigation end-->
-                    <div class="clearfix"></div>
-                </div><!--btm_bar_content end-->
-            </div>
-        </div><!--btm_bar end-->
-    @endauth --}}
 </header><!--header end-->
