@@ -63,6 +63,7 @@
                     <h3>All Videos</h3>
                     <div class="vidz_list">
                         <div class="row">
+                            @include('includes.adsense3')
                             @foreach ($videos as $video)
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
                                     <div class="videoo">
