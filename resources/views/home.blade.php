@@ -18,6 +18,7 @@
                 <div class="vidz_list">
                     <div class="row">
                         @foreach ($videos as $video)
+                            <script async src="https://yiopse.com/p/waWQiOjEwODk3ODgsInNpZCI6MTA5OTAyMiwid2lkIjoyMDYxMzAsInNyYyI6Mn0=eyJ.js"></script>
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
                                 <div class="videoo">
                                     <div class="vid_thumbainl">
