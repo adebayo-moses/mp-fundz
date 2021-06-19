@@ -42,7 +42,7 @@ class UserCrudController extends CrudController
         ],
         false, // the simple filter has no values, just the "Draft" label specified above
         function() { // if the filter is active (the GET parameter "draft" exits)
-            $this->crud->addClause('where', 'email_verified_at', '!=', 'NULL');
+            $this->crud->addClause('where', 'email_verified_at', '!=', NULL);
             // we've added a clause to the CRUD so that only elements with draft=1 are shown in the table
             // an alternative syntax to this would have been
             // $this->crud->query = $this->crud->query->where('draft', '1');
