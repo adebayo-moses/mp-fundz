@@ -43,12 +43,24 @@
             </div><!--vid-title-->
             <div class="abt-tags">
                 <div class="row">
-                    <div class="col-lg-9 col-md-9 col-sm-8 col-12">
+                    <div class="col-lg-7 col-md-7 col-sm-5 col-12">
                         <h2 class="title-hd">Video Link </h2>
                         <div class="form_field pr">
                             <input id="url" type="text" name="url" placeholder="https://www.youtube.com/watch?v=5k4tqWQ2re8" class="form-control @error('url') is-invalid @enderror" name="url" value="{{ old('url') }}" required>
 
                             @error('url')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-12">
+                        <h2 class="title-hd">Coins </h2>
+                        <div class="form_field pr">
+                            <input id="point" type="text" name="point" placeholder="Eg: 4" class="form-control @error('point') is-invalid @enderror" name="point" value="{{ old('point') }}" required>
+
+                            @error('point')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

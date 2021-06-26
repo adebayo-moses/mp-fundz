@@ -62,12 +62,21 @@ class VideoController extends Controller
             'title' => 'required',
             'url' => 'required',
             'exposure' => 'required',
+            'point' => 'required',
             'views' => 'required',
             'receive_views_from' => 'required',
             'daily_limit' => 'required',
         ]);
 
-        $status = Auth::user()->username == 'kunleadeoye' ? 'active' : 'pending';
+        $status = '';
+
+        $username = Auth::user()->username;
+
+        if ( $username == 'kunleadeoye' || $username == 'mosesmax') {
+            $status = 'active';
+        } else {
+            $status = 'pending';
+        }
 
         //Validated
         $video = Video::create([
@@ -77,6 +86,7 @@ class VideoController extends Controller
             'views' => $request->input('views'),
             'published' => true,
             'exposure' => $request->input('exposure'),
+            'point' => $request->input('point'),
             'daily_limit' => $request->input('daily_limit'),
             'status' => $status,
             // 'receive_views_from' => $request->input('receive_views_from')
@@ -134,16 +144,19 @@ class VideoController extends Controller
         //
     }
 
+
     public function addPoint(Request $request) {
 
         $user = User::find(Auth::id());
+
+        $theVideo = Video::find($request->input('video'));
 
         $user_record_for_this_video = VideoHistory::where('video_id', $request->input('video'))->where('user_id', $user->id)->first();
 
         if($user_record_for_this_video === null){
             $coin_balance = $user->coin_balance;
 
-            $updated_coin_balance = $coin_balance + 7.00;
+            $updated_coin_balance = $coin_balance + $theVideo->point;
 
             if($user->update([
                 'coin_balance' => $updated_coin_balance
@@ -157,7 +170,7 @@ class VideoController extends Controller
                     $the_refferal_revenue = $user->referrer->refferal_revenue;
 
                     //Add the bonue
-                    $total_referrer_revenue = $the_refferal_revenue + 0.07;
+                    $total_referrer_revenue = $the_refferal_revenue + ($theVideo->point / 100);
 
                     //Add the bonus to db
                     $user->referrer->update(['refferal_revenue' => $total_referrer_revenue]);
@@ -172,7 +185,7 @@ class VideoController extends Controller
                 return response()->json(
                     [
                         'success' => true,
-                        'message' => 'Great! you have successfully earned 7 points'
+                        'message' => 'Great! you have successfully earned ' . $theVideo->point . ' points'
                     ]
                 );
             }
