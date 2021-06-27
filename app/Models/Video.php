@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Video extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
 
 
 
