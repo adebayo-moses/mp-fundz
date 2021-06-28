@@ -47,7 +47,7 @@
                         <div class="service-col">
                             <img src="{{asset('assets/images/sv4.png')}}" alt="">
                             <h3>Make money with Us </h3>
-                            <p>Every video you watch gives you 7 points and 100 points equlas 1 dollar.</p>
+                            <p>Every video you watch gives you points and 100 points equlas 1 dollar.</p>
                         </div><!--service-col end-->
                     </div>
                 </div>
