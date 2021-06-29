@@ -1,48 +1,4 @@
-/*
-=======================================================
-  [CSS Index]
-  
-  ----------
 
-  Template Name: Edumac - education HTML UI template
-  Version: 1.0
-
-=======================================================
-*/
-
-
-/*
-  ************************ CSS table of content ************************
-
-  1)  reset css
-  2)  global css
-  3)  header-section
-  4)  hero-section
-  5)  inner-hero-section
-  6)  category-section
-  7)  about section
-  8)  feature section
-  9)  event section
-  10) event details
-  11) course section
-  12) teacher section
-  13) teacher details section
-  14) overview section
-  15) faq section
-  16) testimonial section
-  17) blog section
-  18) blog-details-setcion
-  19) contact section
-  20) course details
-  21) gallery section
-  22) login section
-  23) privacy section
-  24) error-section
-  25) sidebar css
-  26) footer section
-
-  **************************************************************** 
-*/
 
 
 /* reset css start */
@@ -139,7 +95,7 @@ span {
 }
 
 a:hover {
-    color: #d4af37;
+    color: #eb8730;
 }
 
 
@@ -441,7 +397,7 @@ input:not([type="radio",
 }
 
 .bg--base {
-    background-color: #d4af37;
+    background-color: #eb8730;
 }
 
 .has--img {
@@ -481,7 +437,7 @@ input:not([type="radio",
 .section-sub-title {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
-    color: #d4af37;
+    color: #eb8730;
 }
 
 @media (max-width: 767px) {
@@ -542,7 +498,7 @@ input:not([type="radio",
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    background-color: #d4af37;
+    background-color: #eb8730;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -567,7 +523,7 @@ input:not([type="radio",
     left: 0;
     top: 0;
     border-radius: 74px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     opacity: 0.15;
     z-index: -10;
 }
@@ -771,12 +727,12 @@ input:not([type="radio",
 }
 
 .d-pagination .pagination li.active a {
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
 }
 
 .d-pagination .pagination li.active a:hover {
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
 }
 
@@ -796,9 +752,9 @@ input:not([type="radio",
 }
 
 .d-pagination .pagination li a:hover {
-    color: #d4af37;
+    color: #eb8730;
     background-color: transparent;
-    border-color: #d4af37;
+    border-color: #eb8730;
 }
 
 .cmn-list {
@@ -821,8 +777,8 @@ input:not([type="radio",
     left: 0;
     width: 20px;
     height: 10px;
-    border-left: 1px solid #d4af37;
-    border-bottom: 1px solid #d4af37;
+    border-left: 1px solid #eb8730;
+    border-bottom: 1px solid #eb8730;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -874,7 +830,7 @@ input:not([type="radio",
 
 .number-list--style li span {
     font-weight: 500;
-    color: #d4af37;
+    color: #eb8730;
 }
 
 .pagination {
@@ -886,8 +842,8 @@ input:not([type="radio",
 }
 
 .pagination li.active a {
-    background-color: #d4af37;
-    border-color: #d4af37;
+    background-color: #eb8730;
+    border-color: #eb8730;
     color: #ffffff;
 }
 
@@ -905,8 +861,8 @@ input:not([type="radio",
 }
 
 .pagination li a:hover {
-    background-color: #d4af37;
-    border-color: #d4af37;
+    background-color: #eb8730;
+    border-color: #eb8730;
     color: #ffffff;
 }
 
@@ -1041,7 +997,7 @@ blockquote p {
 input:focus,
 textarea:focus,
 .nice-select.open {
-    border-color: #d4af37;
+    border-color: #eb8730;
 }
 
 .page-breadcrumb {
@@ -1210,7 +1166,7 @@ textarea:focus,
     cursor: pointer;
     text-align: center;
     border-radius: 50%;
-    background-color: #d4af37;
+    background-color: #eb8730;
     line-height: 77px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
 }
@@ -1254,7 +1210,7 @@ a[class*='lightcase-icon-'].lightcase-icon-close {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #d4af37;
+    background-color: #eb8730ab;
     z-index: 99999999;
 }
 
@@ -1432,7 +1388,7 @@ a:hover {
     -moz-border-radius: 999px;
     -ms-border-radius: 999px;
     -o-border-radius: 999px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -1467,7 +1423,7 @@ input[type="submit"] {
     -moz-border-radius: 999px;
     -ms-border-radius: 999px;
     -o-border-radius: 999px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -1868,7 +1824,7 @@ input[type="submit"] {
 }
 
 .header__top .left .language .nice-select .list {
-    background-color: #d4af37;
+    background-color: #eb8730;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     width: 75px;
 }
@@ -1960,7 +1916,7 @@ input[type="submit"] {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    color: #d4af37;
+    color: #eb8730;
 }
 
 .header .main-menu li a {
@@ -1981,7 +1937,7 @@ input[type="submit"] {
 
 .header .main-menu li a:hover,
 .header .main-menu li a:focus {
-    color: #d4af37;
+    color: #eb8730;
 }
 
 .header .main-menu li .sub-menu {
@@ -1992,7 +1948,7 @@ input[type="submit"] {
     z-index: 9999;
     background-color: #004de2;
     padding: 10px 0;
-    border-top: 2px solid #d4af37;
+    border-top: 2px solid #eb8730;
     -webkit-box-shadow: 0px 18px 54px -8px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 18px 54px -8px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -2288,7 +2244,7 @@ span.is-active:after {
     left: 50%;
     width: 40px;
     height: 40px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     opacity: 0.25;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -2444,7 +2400,7 @@ span.is-active:after {
 
 .category-card {
     padding: 30px 15px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     text-align: center;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -2477,7 +2433,7 @@ span.is-active:after {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -2522,7 +2478,7 @@ span.is-active:after {
     bottom: 0;
     width: 150px;
     height: 150px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
     font-size: 72px;
     display: -ms-flexbox;
@@ -2573,7 +2529,7 @@ span.is-active:after {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
-    background-color: #d4af37;
+    background-color: #eb8730;
 }
 
 .feature-card:hover .feature-card__icon {
@@ -2589,7 +2545,7 @@ span.is-active:after {
 }
 
 .feature-card__icon {
-    color: #d4af37;
+    color: #eb8730;
     font-size: 72px;
     line-height: 1;
     -webkit-transition: all 0.3s;
@@ -2686,7 +2642,7 @@ span.is-active:after {
     left: -9px;
     width: 50px;
     height: 50px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -2700,7 +2656,7 @@ span.is-active:after {
     font-size: 18px;
     margin-left: 25px;
     padding: 5px 25px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     border-radius: 999px;
     -webkit-border-radius: 999px;
     -moz-border-radius: 999px;
@@ -2836,7 +2792,7 @@ span.is-active:after {
 .icon-card__icon {
     width: 60px;
     height: 60px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
     font-size: 36px;
     border-radius: 50%;
@@ -2971,7 +2927,7 @@ span.is-active:after {
 }
 
 .teacher-card:hover .teacher-card__content {
-    background-color: #d4af37;
+    background-color: #eb8730;
 }
 
 .teacher-card:hover .teacher-card__content .name,
@@ -3078,7 +3034,7 @@ span.is-active:after {
 }
 
 .teacher-single-details .content-item span {
-    color: #d4af37;
+    color: #eb8730;
 }
 
 .content-item+.content-item {
@@ -3195,7 +3151,7 @@ span.is-active:after {
     left: 0;
     width: 25px;
     height: 3px;
-    background-color: #d4af37;
+    background-color: #eb8730;
 }
 
 .request-form {
@@ -3260,7 +3216,7 @@ span.is-active:after {
 }
 
 .testimonial-card .designation {
-    color: #d4af37;
+    color: #eb8730;
     font-size: 14px;
     font-style: italic;
 }
@@ -3288,7 +3244,7 @@ span.is-active:after {
 }
 
 .slick-dots li.slick-active button {
-    background-color: #d4af37;
+    background-color: #eb8730;
 }
 
 .slick-dots li button {
@@ -3368,7 +3324,7 @@ span.is-active:after {
     font-size: 30px;
     font-weight: 700;
     color: #ffffff;
-    background-color: #d4af37;
+    background-color: #eb8730;
     padding: 10px 5px;
     width: 100%;
     line-height: 1;
@@ -3444,7 +3400,7 @@ blockquote {
 }
 
 .blog-details__footer .social__links li a:hover {
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
 }
 
@@ -3515,8 +3471,8 @@ blockquote {
 .reply-btn {
     width: 28px;
     height: 28px;
-    background-color: #d4af37;
-    color: #d4af37;
+    background-color: #eb8730;
+    color: #eb8730;
     text-align: center;
     line-height: 28px;
     font-size: 13px;
@@ -3530,7 +3486,7 @@ blockquote {
 }
 
 .reply-btn:hover {
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
 }
 
@@ -3580,7 +3536,7 @@ blockquote {
 
 .contact-item {
     padding: 0 50px 50px 50px;
-    background-color: #d4af37;
+    background-color: #eb8730;
     text-align: center;
     margin-top: 50px;
     border-radius: 8px;
@@ -3625,7 +3581,7 @@ blockquote {
 
 .contact-item .icon i {
     font-size: 36px;
-    color: #d4af37;
+    color: #eb8730;
 }
 
 .contact-item .content .title,
@@ -3854,7 +3810,7 @@ blockquote {
 
 .sidebar .widget .search-form .search-btn {
     position: absolute;
-    color: #d4af37;
+    color: #eb8730;
     background-color: transparent;
     top: 0;
     right: 0;
@@ -3877,7 +3833,7 @@ blockquote {
     bottom: 0;
     width: 20px;
     height: 2px;
-    background-color: #d4af37;
+    background-color: #eb8730;
 }
 
 .sidebar .categories__list .categories__item+.categories__item {
@@ -3896,7 +3852,7 @@ blockquote {
 }
 
 .sidebar .categories__list .categories__item a:hover {
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
 }
 
@@ -3958,9 +3914,9 @@ blockquote {
 }
 
 .sidebar .tags a:hover {
-    background-color: #d4af37;
+    background-color: #eb8730;
     color: #ffffff;
-    border-color: #d4af37;
+    border-color: #eb8730;
 }
 
 .action-sidebar.active {
@@ -3987,7 +3943,7 @@ blockquote {
 }
 
 .action-sidebar .cmn-accordion2 .card-header .acc-btn {
-    background-color: #d4af37;
+    background-color: #eb8730;
     border: none;
     position: relative;
 }
