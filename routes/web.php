@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('send_email_to_too_many_coins_list', function() {
+    if (Auth::user()->username == 'kunleadeoye') {
+        // Mail::to('too_many_coins@mg.mpfundz.com')->send('new OrderShipped($order)');
+        return 'User is Kunle';
+    }else {
+        return 'You are not allowed to access this route';
+    }
+});
 
 Route::get('/', 'PagesController@index');
 

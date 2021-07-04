@@ -32,18 +32,19 @@
     const height = style.height //The height
     const width = style.width //The width
 
-
+    //When the iframe is ready, initiate the player... when the state changes, fire onYouTubePlayerStateChange event
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-            height: height,
-            width: width,
-            videoId: videoId,
+            height,
+            width,
+            videoId,
             events: {
                 'onStateChange': onYouTubePlayerStateChange
             }
         });
     }
 
+    //When the youtube player is playing
     function YouTubePlaying() {
         played += 0.1;
         roundedPlayed = Math.ceil(played);
@@ -56,6 +57,7 @@
         }
     }
 
+    //The youtube video has been played for the exposure specified, reward user
     function YouTubePlayed() {
         if (watchedVideo == 0) {
             $.ajax({
@@ -91,11 +93,13 @@
         }
     }
 
+    //When the youtube player is ready, initiate and allow event to fire
     function onYouTubePlayerReady(a) {
         ytplayer = document.getElementById("myytplayer");
         ytplayer.addEventListener("onStateChange", "onYouTubePlayerStateChange")
     }
 
+    //When the state changes; e.g play
     function onYouTubePlayerStateChange(a) {
         if (a.data == YT.PlayerState.PLAYING) {
             playing = true;
@@ -123,19 +127,37 @@
                     @if ($video->check_history)
                         <h3 class="mb-4" style="color: red;">You've watched this video, and you won't be rewarded anymore! <span style="color: black;"><a href="{{route('home')}}">Make More Money</a></span></h3>
                     @else
-                    <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn 7 points</b></h3>
+                    <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn {{$video->point}} points</b></h3>
                     @endif
                     <div class="vid-1">
-                        <div class="vid-pr">
-                            <div id="player"  video_id="{{$video->video_id}}" exposure={{$video->exposure}} video="{{$video->id}}" watched={{$video->check_history}}></div>
-                        </div><!--vid-pr end-->
-                        <div class="vid-info">
-                            <h3>{{$video->title}}</h3>
-                            <div class="info-pr">
-                                {{-- <span>{{$video->views}} views</span> --}}
-                                <div class="clearfix"></div>
-                            </div><!--info-pr end-->
-                        </div><!--vid-info end-->
+                        @if ($video->video_type == 'youtube')
+                            <div class="vid-pr">
+                                <div id="player"  video_id="{{$video->video_id}}" exposure={{$video->exposure}} video="{{$video->id}}" watched={{$video->check_history}}></div>
+                            </div><!--vid-pr end-->
+                            <div class="vid-info">
+                                <h3>{{$video->title}}</h3>
+                                <div class="info-pr">
+                                    {{-- <span>{{$video->views}} views</span> --}}
+                                    <div class="clearfix"></div>
+                                </div><!--info-pr end-->
+                            </div><!--vid-info end-->
+                        @else
+                            <div class="vid-pr">
+                                <!-- Load Facebook SDK for JavaScript -->
+                                <div id="fb-root"></div>
+                                <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+                                <!-- Your embedded video player code -->
+                                <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/165608152267073/" data-show-text="false"></div>
+                            </div><!--vid-pr end-->
+                            <div class="vid-info">
+                                <h3>How to share with just friends.</h3>
+                                <div class="info-pr">
+                                    {{-- <span>{{$video->views}} views</span> --}}
+                                    <div class="clearfix"></div>
+                                </div><!--info-pr end-->
+                            </div><!--vid-info end-->
+                        @endif
                     </div><!--vid-1 end-->
                 </div><!--mn-vid-sc end--->
             </div><!---col-lg-9 end-->
