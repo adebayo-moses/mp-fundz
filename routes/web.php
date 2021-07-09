@@ -40,7 +40,7 @@ Route::get('get_winners', function() {
     if (Auth::user()->username == 'kunleadeoye') {
 
         $users = DB::table('entries')
-             ->select(DB::raw('sum(entry) as sum, user_id'))
+             ->select(DB::raw('user_id, sum(entry)'))
              ->groupBy('user_id')
              ->orderBy('entry', 'DESC')->get();
 
