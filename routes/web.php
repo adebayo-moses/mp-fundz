@@ -34,7 +34,7 @@ Route::get('send_email_to_too_many_coins_list', function() {
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/get_winners', function() {
+Route::get('get_winners', function() {
 
     if (Auth::user()->username == 'kunleadeoye') {
         // dd(User::where('total_entry', '!=', 0)->get());
