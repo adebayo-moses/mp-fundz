@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('send_email_to_too_many_coins_list', function() {
     if (Auth::user()->username == 'kunleadeoye') {
         // Mail::to('too_many_coins@mg.mpfundz.com')->send('new OrderShipped($order)');
-        return 'User is Kunle';
+        // $details = [
+        //     'title' => 'Mail from MPFundz.com',
+        //     'body' => 'This is for testing email using smtp'
+        // ];
+
+        Mail::to('too_many_coins@mg.mpfundz.com')->send(new \App\Mail\NewVideoMail());
+
+        dd("Email is Sent.");
+        // return 'User is Kunle';
     }else {
         return 'You are not allowed to access this route';
     }
