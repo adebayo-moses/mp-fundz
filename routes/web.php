@@ -2,6 +2,7 @@
 
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 /*
@@ -37,26 +38,13 @@ Route::get('/', 'PagesController@index');
 Route::get('get_winners', function() {
 
     if (Auth::user()->username == 'kunleadeoye') {
-        // dd(User::where('total_entry', '!=', 0)->get());
-        // $array = Array();
-        foreach(User::all() as $user) {
 
-            // array_push($user->total_entry);
+        $users = DB::table('entries')
+             ->select(DB::raw('sum(entry) as sum, user_id'))
+             ->groupBy('user_id')
+             ->orderBy('entry', 'DESC')->get();
 
-            if ($user->total_entry != 0) {
-                # code...
-                echo 'Name: ' . $user->first_name . ' ' . $user->last_name . ', Username: ' . $user->username .  ', Total Entry: ' . $user->total_enry . '<br>';
-            }
-
-        }
-
-        // return $array;
-
-        // $result = User::all()->pluck('total_entry');
-
-        // dd($result);
-
-        // return rsort($result);
+             dd($users);
     }else {
         return 'You are not allowed to access this route';
     }
