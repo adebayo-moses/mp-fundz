@@ -37,9 +37,26 @@ Route::get('/', 'PagesController@index');
 Route::get('/get_winners', function() {
 
     if (Auth::user()->username == 'kunleadeoye') {
+        // dd(User::where('total_entry', '!=', 0)->get());
+        // $array = Array();
         foreach(User::all() as $user) {
-            echo 'Name: ' . $user->first_name . ' ' . $user->last_name . ', Username: ' . $user->username .  ', Total Entry: ' . $user->total_enry . '<br>';
+
+            // array_push($user->total_entry);
+
+            if ($user->total_entry != 0) {
+                # code...
+                echo 'Name: ' . $user->first_name . ' ' . $user->last_name . ', Username: ' . $user->username .  ', Total Entry: ' . $user->total_enry . '<br>';
+            }
+
         }
+
+        // return $array;
+
+        // $result = User::all()->pluck('total_entry');
+
+        // dd($result);
+
+        // return rsort($result);
     }else {
         return 'You are not allowed to access this route';
     }

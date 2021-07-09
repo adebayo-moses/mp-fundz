@@ -134,7 +134,7 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->referral_link = route('register', ['ref' => $this->username]);
     }
 
-    public function getTotalEnryAttribute() {
+    public function getTotalEntryAttribute() {
         $total = 0;
 
         foreach($this->entries()->pluck('entry') as $entry) {
