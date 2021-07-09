@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\VideoRequest;
+use App\Http\Requests\ContestRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class VideoCrudController
+ * Class ContestCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class VideoCrudController extends CrudController
+class ContestCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class VideoCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Video::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/video');
-        CRUD::setEntityNameStrings('video', 'videos');
+        CRUD::setModel(\App\Models\Contest::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/contest');
+        CRUD::setEntityNameStrings('contest', 'contests');
     }
 
     /**
@@ -39,16 +39,12 @@ class VideoCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('path');
-        CRUD::column('title');
-        CRUD::column('user_id');
-        CRUD::column('views');
-        CRUD::column('published');
-        CRUD::column('exposure');
-        CRUD::column('point');
-        CRUD::column('show_video_on');
-        CRUD::column('daily_limit');
-        CRUD::column('status');
+        CRUD::column('date');
+        CRUD::column('start_time');
+        CRUD::column('end_time');
+        CRUD::column('winners');
+        CRUD::column('publish');
+        CRUD::column('activate_payment');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -65,18 +61,14 @@ class VideoCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(VideoRequest::class);
+        CRUD::setValidation(ContestRequest::class);
 
-        CRUD::field('path');
-        CRUD::field('title');
-        CRUD::field('user_id');
-        CRUD::field('views');
-        CRUD::field('published');
-        CRUD::field('exposure');
-        CRUD::field('point');
-        CRUD::field('show_video_on')->type('enum');
-        CRUD::field('daily_limit');
-        CRUD::field('status');
+        CRUD::field('date');
+        CRUD::field('start_time');
+        CRUD::field('end_time');
+        CRUD::field('winners');
+        CRUD::field('publish');
+        CRUD::field('activate_payment');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

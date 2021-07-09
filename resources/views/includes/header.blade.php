@@ -73,6 +73,12 @@
                                             <span>
                                                 <i class="icon-paid_sub"></i>
                                             </span>
+                                            <a href="{{route('join_contest')}}">Join Contest</a>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <i class="icon-paid_sub"></i>
+                                            </span>
                                             <a href="{{route('user.account.withdraw')}}" title="">Withdraw Money</a>
                                         </li>
                                         <li>
@@ -94,7 +100,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="{{route('user.account.withdraw')}}" class="btn-default">Withdraw</a>
+                            <a href="{{route('join_contest')}}" class="btn-default">Join Contest</a>
                         </li>
                         <li class="icon-menu-log">
                             <a href="#" title="" class="menu">
@@ -106,4 +112,6 @@
             </div><!--top_header_content end-->
         </div>
     </div><!--header_content end-->
+
+    @yield('contest')
 </header><!--header end-->

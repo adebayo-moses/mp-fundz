@@ -61,6 +61,21 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany('App\Models\Withdrawal');
     }
 
+    public function payments()
+    {
+        return $this->hasMany('App\Models\Payment');
+    }
+
+    public function contests()
+    {
+        return $this->belongsToMany('App\Models\Contest', 'contest_user');
+    }
+
+    public function entries()
+    {
+        return $this->hasMany('App\Models\Entry');
+    }
+
     /**
      * A user has a referrer.
      *

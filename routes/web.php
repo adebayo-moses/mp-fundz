@@ -50,3 +50,23 @@ Route::get('user/account/withdraw', 'AccountController@withdraw')->name('user.ac
 Route::post('user/account/store', 'AccountController@store')->name('user.account.store');
 
 Route::post('password/change', 'Auth\ChangePasswordController@change')->name('password.change');
+
+// Contest
+Route::get('/contest/join', 'ContestController@join')->name('join_contest');
+
+//Show video
+Route::get('/contest/video/{id}', 'ContestController@show_video')->name('contest.show_video')->middleware('paycheck');
+
+//Add entry
+Route::post('/contest/entry/add', 'ContestController@add_entry')->name('contest.add_entry')->middleware('paycheck');
+
+//Payment Integration
+// The route that the button calls to initialize payment
+Route::get('/pay', 'FlutterwaveController@initialize')->name('pay');
+// The callback url after a payment
+Route::get('/rave/callback', 'FlutterwaveController@callback')->name('callback');
+
+//success url
+Route::get('/payment_success', 'FlutterwaveController@payment_success')->name('payment_success');
+//success failed
+Route::get('/payment_failed', 'FlutterwaveController@payment_failed')->name('payment_failed');

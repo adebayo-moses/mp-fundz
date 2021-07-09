@@ -6,13 +6,14 @@ use App\Models\Country;
 use App\Models\Video;
 use App\Models\VideoCategory;
 use App\Models\VideoHistory;
-use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\Http\Traits\QueryTrait;
+
 class VideoController extends Controller
 {
-
+    use QueryTrait;
     /**
      * Create a new controller instance.
      *
@@ -147,9 +148,9 @@ class VideoController extends Controller
 
     public function addPoint(Request $request) {
 
-        $user = User::find(Auth::id());
+        $user = $this->getUser;
 
-        $theVideo = Video::find($request->input('video'));
+        $theVideo = $this->getVideo($request->input('video'));
 
         $user_record_for_this_video = VideoHistory::where('video_id', $request->input('video'))->where('user_id', $user->id)->first();
 

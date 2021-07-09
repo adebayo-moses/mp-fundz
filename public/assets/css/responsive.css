@@ -264,7 +264,7 @@
 	.controls-lv > li.login-area {display: block; margin-right: 20px;}
 	nav ul li {padding-top: 0;margin-bottom: 10px;}
 	nav {margin-top: 25px;}
-	.shr_links {margin-top: 10px;}
+	.shr_links {margin-top: 20px;}
 	.banner-text > h2 {padding: 0 70px;font-size: 26px;}
 	nav ul li a {font-size: 14px;}
 	.form_popup {padding-top: 40px;}
@@ -306,7 +306,7 @@
 	.mgt-50 {margin-top: 30px;}
 	.vid-pr iframe {height: 230px;}
 	.mn-sec.full_wdth_single_video .vid-pr iframe {height: 300px;}
-	.shr_links li button {font-size: 15px;}
+	.shr_links li button {font-size: 17px; margin-top: 15px;}
 	.shr_links {margin-bottom: 20px;}
 }
 

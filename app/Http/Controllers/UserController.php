@@ -30,7 +30,7 @@ class UserController extends Controller
 
     public function profile() {
 
-        $latest_videos = Video::take(5)->get();
+        $latest_videos = Video::where('status', '!=' , 'pending')->where('show_video_on', '!=', 'contest')->orderBy('id', 'DESC')->take(5)->get();
 
         return view('users.profile')->with('latest_videos', $latest_videos);
     }

@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Video;
-use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function index() {
 
-        $videos = Video::where('status', '!=' , 'pending')->orderBy('id', 'DESC')->get();
+        $videos = Video::where('status', '!=' , 'pending')->where('show_video_on', '!=', 'contest')->orderBy('id', 'DESC')->simplePaginate(40);
 
         return view('welcome')->with('videos', $videos);
     }

@@ -93,6 +93,17 @@
         </div><!--vidz-row end-->
     </section><!--vds-main end-->
 
+    <section class="more_items_sec">
+		<div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    {{ $videos->links() }}
+                </div>
+            </div>
+		</div>
+	</section><!--more_items_sec end-->
+
     @guest
         <section class="more_items_sec text-center">
             <div class="container">
