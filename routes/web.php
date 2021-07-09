@@ -1,9 +1,9 @@
 <?php
 
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +33,17 @@ Route::get('send_email_to_too_many_coins_list', function() {
 });
 
 Route::get('/', 'PagesController@index');
+
+Route::get('/get_winners', function() {
+
+    if (Auth::user()->username == 'kunleadeoye') {
+        foreach(User::all() as $user) {
+            echo 'Name: ' . $user->first_name . ' ' . $user->last_name . ', Username: ' . $user->username .  ', Total Entry: ' . $user->total_enry . '<br>';
+        }
+    }else {
+        return 'You are not allowed to access this route';
+    }
+});
 
 Auth::routes(['verify' => true]);
 

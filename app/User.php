@@ -122,7 +122,7 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
-    protected $appends = ['referral_link', 'total_coin_balance', 'amount_in_dollars'];
+    protected $appends = ['referral_link', 'total_coin_balance', 'amount_in_dollars', 'total_entry'];
 
     /**
      * Get the user's referral link.
@@ -132,6 +132,17 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getReferralLinkAttribute()
     {
         return $this->referral_link = route('register', ['ref' => $this->username]);
+    }
+
+    public function getTotalEnryAttribute() {
+        $total = 0;
+
+        foreach($this->entries()->pluck('entry') as $entry) {
+            $total += $entry;
+        }
+
+        return $this->total_entry = $total;
+
     }
 
 

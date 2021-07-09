@@ -74,12 +74,22 @@ class UserCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // columns
+        // CRUD::setFromDb(); // columns
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
          * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
          */
+
+        CRUD::column('first_name');
+        CRUD::column('last_name');
+        CRUD::column('email');
+        CRUD::column('username');
+        CRUD::column('coin_balance');
+        CRUD::column('refferal_revenue');
+        CRUD::column('subscribed_to_news_letter');
+        CRUD::column('total_entry')->type('number');
+        CRUD::column('last_login');
     }
 
     /**
