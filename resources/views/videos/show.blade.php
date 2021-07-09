@@ -14,6 +14,7 @@
     var playing = false;
     var fullyPlayed = false;
     var interval = '';
+    var rewarded = false;
     var played = 0;
     var length = document.getElementById('player').getAttribute("exposure");
     var videoId = document.getElementById('player').getAttribute("video_id");
@@ -46,9 +47,11 @@
 
     //When the youtube player is playing
     function YouTubePlaying() {
-        played += 0.1;
-        roundedPlayed = Math.ceil(played);
-        document.getElementById("played").innerHTML = Math.min(roundedPlayed, length);
+        if(!rewarded) {
+            played += 0.1;
+            roundedPlayed = Math.ceil(played);
+            document.getElementById("played").innerHTML = Math.min(roundedPlayed, length);
+        }
         if (roundedPlayed == length) {
             if (fullyPlayed == false) {
                 YouTubePlayed();
@@ -78,6 +81,8 @@
                         ).then(function() {
                         });
                         $('#countdown').html('<a href="{{route('home')}}" style="font-weight:600;color:red"><b>MAKE MORE MONEY HERE</b></a>');
+
+                        rewarded = true;
                     }
 
                 } ,

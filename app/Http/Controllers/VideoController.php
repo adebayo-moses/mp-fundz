@@ -148,7 +148,7 @@ class VideoController extends Controller
 
     public function addPoint(Request $request) {
 
-        $user = $this->getUser;
+        $user = $this->getUser();
 
         $theVideo = $this->getVideo($request->input('video'));
 
