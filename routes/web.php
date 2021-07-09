@@ -42,7 +42,8 @@ Route::get('get_winners', function() {
         $users = DB::table('entries')
              ->select(DB::raw('user_id, sum(entry)'))
              ->groupBy('user_id')
-             ->orderBy('sum', 'DESC')->get();
+             ->orderBy('sum', 'DESC')
+             ->join('users', 'user_id', '=', 'user.id');
 
              dd($users);
     }else {
