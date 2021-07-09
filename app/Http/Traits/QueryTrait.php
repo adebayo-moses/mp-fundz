@@ -25,7 +25,10 @@ trait QueryTrait {
         //Date now
         $current_date = Carbon::now()->format('Y-m-d');
 
-        return Contest::where('date', $current_date)->where('publish', 1)->orderBy('id', 'DESC')->first();
+        //Time now
+        $current_time = Carbon::now()->format('H:i:s');
+
+        return Contest::where('date', $current_date)->where('publish', 1)->where('end_time', '>' , $current_time)->orderBy('id', 'DESC')->first();
     }
 
     public function getPaymentRecord() {
