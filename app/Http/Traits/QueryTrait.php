@@ -21,6 +21,13 @@ trait QueryTrait {
         return Contest::where('date', $current_date)->whereTime('start_time', '<=', $current_time)->whereTime('end_time', '>=', $current_time)->first();
     }
 
+    public function getTodayContest() {
+        //Date now
+        $current_date = Carbon::now()->format('Y-m-d');
+
+        return Contest::where('date', $current_date)->where('publish', 1)->orderBy('id', 'DESC')->first();
+    }
+
     public function getPaymentRecord() {
 
         $current_contest = $this->getCurrentContest();

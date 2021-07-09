@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Entry extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     /*
     |--------------------------------------------------------------------------
     | GLOBAL VARIABLES

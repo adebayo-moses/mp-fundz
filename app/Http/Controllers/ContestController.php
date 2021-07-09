@@ -52,7 +52,17 @@ class ContestController extends Controller
             return redirect()->route('pay');
 
         } else {
-            return redirect()->back()->with('error', 'No contest is active at the moment');
+
+            $error_text = '';
+
+            if($this->getTodayContest() !== null) {
+                //There's a contest today
+                $error_text = 'No contest is active at the moment, check by ' . $this->getTodayContest()->start_time;
+            } else {
+                $error_text = 'No contest is active at the moment';
+            }
+
+            return redirect()->back()->with('error', $error_text);
         }
     }
 
