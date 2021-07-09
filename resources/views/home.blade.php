@@ -113,7 +113,7 @@
                                 <div class="text-center">
                                     <h1 class="pt-3">Welcome Back, {{Auth::user()->first_name}}</h1>
                                     <p class="my-2">
-                                        Do you know you can instantly make <b style="font-weight: bold;">N20, 000.00</b> by watching videos in the ongoing contest? The more videos you watch, the better your chances of winning. We have 3 sessions, the first session is between 09am and 01am, second session is between 02pm and 06pm, and the last session is between 07pm and 11pm.
+                                        Do you know you can instantly make <b style="font-weight: bold;">N20, 000.00</b> by watching videos in the ongoing contest? The more videos you watch, the better your chances of winning. We have 3 sessions, the first session is between 09AM and 01PM, second session is between 02PM and 06PM, and the last session is between 07PM and 11PM.
                                         What are you still waiting for ? Kindly click on 'Get Started' below and take advantage of this fantastic opportunity!
                                     </p>
                                     <a href="{{route('join_contest')}}" class="btn btn-default">Get Started</a>
