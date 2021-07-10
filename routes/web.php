@@ -24,7 +24,7 @@ Route::get('send_mail_to_winners', function() {
         //     'body' => 'This is for testing email using smtp'
         // ];
         // Mail::to('zenesoftinc@gmail.com')->send(new \App\Mail\NewVideoMail());
-        Mail::to('alexanderluke3339@gmail.com')->send(new \App\Mail\NewVideoMail());
+        Mail::to('kougnaglo48@gmail.com')->send(new \App\Mail\NewVideoMail());
 
         dd("Email is Sent.");
         // return 'User is Kunle';

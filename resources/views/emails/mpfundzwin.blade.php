@@ -123,13 +123,13 @@ u + .em_body .em_full_wrap { width:100% !important; width:100vw !important;}
                 <td height="45" style="height:45px;" class="em_h20">&nbsp;</td>
               </tr>
               <tr>
-                <td class="em_blue em_font_22" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 20px; line-height: 29px; color:#264780; font-weight:bold;">Hello, Alexandra</td>
+                <td class="em_blue em_font_22" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 20px; line-height: 29px; color:#264780; font-weight:bold;">Hello, Paul</td>
               </tr>
               <tr>
                 <td height="14" style="height:14px; font-size:0px; line-height:0px;">&nbsp;</td>
               </tr>
               <tr>
-                <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 26px; color:#434343;">Congratulations for being part of the winners of the yesterday's MPFundz's contest. You have won N20k! <br> Kindly upload your account details on the platform if you haven't. Thank you for joining the contest, and we hope to see you in the next one.</td>
+                <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 26px; color:#434343;">Congratulations once again for being part of the winners of the yesterday's MPFundz's contest. <br> Please add your account again as the one you added is 11 digits. Thank you for joining the contest, and we hope to see you in the next one.</td>
               </tr>
               <tr>
                 <td height="26" style="height:26px;" class="em_h20">&nbsp;</td>
