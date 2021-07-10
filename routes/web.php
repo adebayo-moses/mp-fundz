@@ -16,15 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('send_email_to_too_many_coins_list', function() {
+Route::get('send_mail_to_winners', function() {
     if (Auth::user()->username == 'kunleadeoye') {
         // Mail::to('too_many_coins@mg.mpfundz.com')->send('new OrderShipped($order)');
         // $details = [
         //     'title' => 'Mail from MPFundz.com',
         //     'body' => 'This is for testing email using smtp'
         // ];
-
-        Mail::to('info@mg.mpfundz.com')->send(new \App\Mail\NewVideoMail());
+        Mail::to('kougnaglo48@gmail.com')->send(new \App\Mail\NewVideoMail());
 
         dd("Email is Sent.");
         // return 'User is Kunle';
