@@ -27,7 +27,7 @@ class NewVideoMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('You Won 20K On MPFundz.com')
+        return $this->subject('You Won N20K On MPFundz.com')
                 ->view('emails.mpfundzwin');
     }
 }
