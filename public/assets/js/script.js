@@ -1,5 +1,5 @@
 (function($) {
-  
+
   "use strict";
 
 
@@ -47,7 +47,7 @@
 
 
     //  ==================== SCROLLING FUNCTION ====================
-    
+
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })

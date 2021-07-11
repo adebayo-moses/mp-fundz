@@ -25,7 +25,7 @@
                                                 <img src="https://img.youtube.com/vi/{{$video->video_id}}/hqdefault.jpg" alt="{{$video->title}}" />
                                                 {{-- <span class="vid-point">Reward:</span>
                                                 <span class="vid-time">{{$video->point}} Coins</span> --}}
-                                                <span class="watch_later" style="color: orangered;">{{$video->check_history ? 'Watched' : ''}}</span>
+                                                <span class="watch_later" style="color: orangered;">{{$video->check_entry_history ? 'Watched' : ''}}</span>
                                             </a>
                                         </div><!--vid_thumbnail end-->
                                         <div class="video_info">

@@ -40,7 +40,7 @@ trait QueryTrait {
 
     public function getContestVideos() {
 
-        return Video::where('show_video_on', 'contest')->orwhere('show_video_on', 'both')->get();
+        return Video::where('status', '!=' , 'pending')->where('show_video_on', 'contest')->orwhere('show_video_on', 'both')->orderBy('id', 'DESC')->paginate(8);
     }
 
     public function attachUserToContest() {

@@ -8,108 +8,97 @@
 @endsection
 
 @section('scripts')
-<script src="https://www.youtube.com/iframe_api"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<script type="text/javascript">
-    var playing = false;
-    var fullyPlayed = false;
-    var interval = '';
-    var played = 0;
-    var length = document.getElementById('player').getAttribute("exposure");
-    var videoId = document.getElementById('player').getAttribute("video_id");
+<script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var retrievedVideo = document.getElementById('player').getAttribute("video");
-    var watchedVideo = document.getElementById('player').getAttribute("watched");
+    //Get the player element
+    var playerElement = document.getElementById('player');
 
-    var data = new FormData();
-    data.append("video", retrievedVideo);
-
-    var player, playing = false;
+    //Get id of the video
+    var videoId = playerElement.getAttribute("video_id");
 
     //Get height and width of the video from css
-    const element = document.querySelector('.vid-pr');
-    const style = getComputedStyle(element);
-    const height = style.height //The height
-    const width = style.width //The width
+    var element = document.querySelector('.vid-pr');
+    var style = getComputedStyle(element);
+    var height = style.height //The height
+    var width = style.width //The width
 
-    //When the iframe is ready, initiate the player... when the state changes, fire onYouTubePlayerStateChange event
+    // This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
     function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height,
-            width,
-            videoId,
-            events: {
-                'onStateChange': onYouTubePlayerStateChange
-            }
-        });
-    }
-
-    //When the youtube player is playing
-    function YouTubePlaying() {
-        played += 0.1;
-        roundedPlayed = Math.ceil(played);
-        document.getElementById("played").innerHTML = Math.min(roundedPlayed, length);
-        if (roundedPlayed == length) {
-            if (fullyPlayed == false) {
-                YouTubePlayed();
-                fullyPlayed = true
-            }
+    player = new YT.Player('player', {
+        height,
+        width,
+        videoId,
+        events: {
+        'onStateChange': onYouTubePlayerStateChange
         }
-    }
-
-    //The youtube video has been played for the exposure specified, reward user
-    function YouTubePlayed() {
-        if (watchedVideo == 0) {
-            $.ajax({
-                method: "POST",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                url: "{{route('contest.add_entry')}}",
-                data: data,
-                processData: false,
-                contentType: false,
-                success: (res) => {
-                    if(res) {
-                        Swal.fire(
-                            "Success!",
-                            res.message,
-                            'success'
-                        ).then(function() {
-                        });
-                        $('#countdown').html('<a href="{{route('join_contest')}}" style="font-weight:600;color:red"><b>WATCH MORE VIDEOS HERE</b></a>');
-                    }
-
-                } ,
-                error: (response) => {
-                    if(response.status === 422) {
-                        let errors = response.responseJSON.errors;
-                        Object.keys(errors).forEach(function (key) {
-                            $("#" + key + "Error").text(errors[key][0]);
-                        });
-                    }
-                },
-            });
-        }
-    }
-
-    //When the youtube player is ready, initiate and allow event to fire
-    function onYouTubePlayerReady(a) {
-        ytplayer = document.getElementById("myytplayer");
-        ytplayer.addEventListener("onStateChange", "onYouTubePlayerStateChange")
+    });
     }
 
     //When the state changes; e.g play
-    function onYouTubePlayerStateChange(a) {
-        if (a.data == YT.PlayerState.PLAYING) {
-            playing = true;
-            interval = window.setInterval("YouTubePlaying()", 100)
+    var interval, playing= false, watchedVideo = playerElement.getAttribute("watched");
+    function onYouTubePlayerStateChange(e) {
+        if (e.data == YT.PlayerState.PLAYING) {
+            if(watchedVideo == 0) {
+                playing = true;
+                interval = setInterval("YouTubePlaying()", 1000);
+            }
         } else {
             if (playing) {
-                window.clearInterval(interval)
+                clearInterval(interval);
             }
             playing = false
         }
+    }
+
+    // When the youtube player is playing, run this function
+    var rewarded = false, playedTime, videoExposure = playerElement.getAttribute("exposure");
+    function YouTubePlaying() {
+        playedTime = Math.floor(player.getCurrentTime());
+        document.getElementById("played").innerHTML = playedTime;
+        if (playedTime == videoExposure && !rewarded) {
+            //Video played for the specified exposure, reward user
+            YouTubePlayed();
+            rewarded = true;
+            clearInterval(interval);
+        }
+    }
+
+
+    //The youtube video has been played for the exposure specified, reward user
+    var retrievedVideo = playerElement.getAttribute("video");
+    var data = new FormData();
+    data.append("video", retrievedVideo);
+    function YouTubePlayed() {
+        $.ajax({
+            method: "POST",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{route('contest.add_entry')}}",
+            data: data,
+            processData: false,
+            contentType: false,
+            success: (res) => {
+                if(res) {
+                    Swal.fire(
+                        "Success!",
+                        res.message,
+                        'success'
+                    ).then(function() {
+                    });
+                    $('#countdown').html('<a href="{{route('join_contest')}}" style="font-weight:600;color:red"><b>WATCH MORE VIDEOS HERE</b></a>');
+                }
+
+            },
+        });
     }
 </script>
 @endsection

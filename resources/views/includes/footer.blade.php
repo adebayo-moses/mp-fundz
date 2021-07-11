@@ -2,11 +2,6 @@
     <div class="container">
         <div class="top-footer">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="ft-logo">
-                        <img src="images/ft-logo.png" alt="">
-                    </div><!--ft-logo end-->
-                </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="widget">
                         <h3 class="widget-title">pages</h3>

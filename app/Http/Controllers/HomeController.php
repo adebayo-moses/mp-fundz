@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $videos = Video::where('status', '!=' , 'pending')->where('show_video_on', '!=', 'contest')->orderBy('id', 'DESC')->simplePaginate(40);
+        $videos = Video::where('status', '!=' , 'pending')->where('show_video_on', '!=', 'contest')->orderBy('id', 'DESC')->simplePaginate(8);
 
         return view('home')->with('videos', $videos);
     }
