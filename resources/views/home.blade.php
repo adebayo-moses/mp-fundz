@@ -103,7 +103,7 @@
                             <button type="button" class="close light" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <div class=" py-5 text-center rounded-top" style="background-color: #d7d7da;    background-image: url(assets/img/poly.svg);
+                            <div class=" py-5 text-center rounded-top" style="background-color: #d7d7da;
                                 background-size: 10px;
                                 background-repeat: repeat-x;
                                 background-position: 0 100.1%;">

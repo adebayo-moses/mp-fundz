@@ -47,4 +47,15 @@
         </div><!--vidz-row end-->
     </section><!--vds-main end-->
 
+    <section class="more_items_sec">
+		<div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    {{ $contest_videos->links() }}
+                </div>
+            </div>
+		</div>
+	</section><!--more_items_sec end-->
+
 @endsection

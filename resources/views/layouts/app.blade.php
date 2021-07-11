@@ -22,10 +22,6 @@
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/color.css')}}">
 
-        <script type="text/javascript">
-            $('#tooltip').tooltip(options);
-        </script>
-
         @yield('css')
     </head>
 
@@ -68,6 +64,9 @@
 
         {{-- Google Adsense --}}
         <script data-ad-client="ca-pub-4199733205009272" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script type="text/javascript">
+            $('#tooltip').tooltip();
+        </script>
     </body>
 
 

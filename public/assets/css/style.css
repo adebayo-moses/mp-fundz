@@ -78,7 +78,7 @@ ul {
 }
 a:hover {
 	text-decoration: none;
-	color: #b28300;
+	color: #e06b20;
 }
 blockquote, q {
 	quotes: none;
@@ -156,7 +156,7 @@ nav ul li a:hover,
 .info-sr h3:hover,
 .social-links li a:hover,
 .pages-link li a:hover {
-	color: #b28300;
+	color: #e06b20;
 }
 .vcp_inf.pc form button:hover,
 button:hover,
@@ -166,7 +166,7 @@ button:hover,
 .ch-pswd button:hover,
 .controls-lv li a.btn-default:hover {
 	color: #fff;
-	background-color: #b28300;
+	background-color: #e06b20;
 }
 .container {
 	max-width: 1170px;
@@ -412,7 +412,7 @@ header .container {
 	display: inline-block;
 	color: #ffffff;
 	font-size: 16px;
-	background-color: #b28300;
+	background-color: #e06b20;
 	height: 38px;
 	line-height: 38px;
 	padding: 0 30px;
@@ -826,7 +826,7 @@ svg:hover path {
     padding: 2px 5px;
 	/* width: 30px;
 	height: 30px; */
-	background-color: #414346;
+	background-color: #171718;
 	line-height: 25px;
 	color: #fff;
 	text-align: center;
@@ -846,7 +846,7 @@ svg:hover path {
 .vidz_img:hover .watch_later {
 	opacity: 1;
 	visibility: visible;
-	right: 7px;
+	left: 7px;
 }
 .vid-time {
 	position: absolute;
@@ -2142,7 +2142,7 @@ strong {
 	margin-bottom: 0;
 }
 .link-pr ul li a {
-	color: #b28300;
+	color: #e06b20;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 23px;
@@ -2642,7 +2642,7 @@ strong {
 	width: 100%;
 	color: #fff;
 	font-size: 16px;
-	background-color: #b28300;
+	background-color: #e06b20;
 	font-weight: 500;
 }
 .check_bar {
@@ -4681,7 +4681,7 @@ header.hp_1 .side_links li.user_contrl {
 }
 .form-text p a {
 	display: inline-block;
-	color: #b28300;
+	color: #e06b20;
 }
 
 
