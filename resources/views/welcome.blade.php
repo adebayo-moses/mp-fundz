@@ -12,7 +12,11 @@
         <div class="container">
             <div class="banner-text">
                 <h2>Watch, earn and upload unlimited content</h2>
-                <a href="{{route('register')}}" title="">Create my account</a>
+                @auth
+                    <a href="{{route('home')}}" title="">Go To Dashboard</a>
+                @else
+                    <a href="{{route('register')}}" title="">Create my account</a>
+                @endauth
             </div><!--banner-text end-->
             {{-- <h3 class="headline">Video of the Day by <a href="#" title="">Admin</a></h3> --}}
         </div>
@@ -28,21 +32,6 @@
                             <h3>Get paid watching videos</h3>
                             <p>Make money from the comfort of your home catching cruise with videos</p>
                         </div><!--service-col end-->
-                    </div>
-                    {{-- <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <div class="service-col">
-                            <img src="{{asset('assets/images/sv2.png')}}" alt="">
-                            <h3>Grow your audience/business</h3>
-                            <p>Upload your content and wait while our growing audience do the magic. </p>
-                        </div><!--service-col end-->
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <div class="service-col">
-                            <img src="{{asset('assets/images/sv3.png')}}" alt="">
-                            <h3>Simple transfer from YouTube</h3>
-                            <p>Upload your videos from YouTube with an easy link copy/paste.</p>
-                        </div><!--service-col end-->
-                    </div> --}}
                     <div class="col-lg-4 mx-lg-auto col-md-6 col-sm-6 col-12">
                         <div class="service-col">
                             <img src="{{asset('assets/images/sv4.png')}}" alt="">

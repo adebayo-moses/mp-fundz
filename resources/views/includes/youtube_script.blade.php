@@ -48,9 +48,10 @@
     }
 
     // When the youtube player is playing, run this function
-    var rewarded = false, playedTime, videoExposure = playerElement.getAttribute("exposure");
+    var rewarded = false, playedTime = 0, videoExposure = playerElement.getAttribute("exposure");
     function YouTubePlaying() {
-        playedTime = Math.floor(player.getCurrentTime());
+        // playedTime = Math.floor(player.getCurrentTime());
+        playedTime += 1;
         document.getElementById("played").innerHTML = playedTime;
         if (playedTime == videoExposure && !rewarded) {
             //Video played for the specified exposure, reward user

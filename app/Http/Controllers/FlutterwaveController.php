@@ -129,7 +129,7 @@ class FlutterwaveController extends Controller
         }
 
         // Confirm that the db transaction amount is equal to the returned amount
-        if($transaction->amount !== $data['data']['charged_amount']) {
+        if($transaction->amount > $data['data']['charged_amount']) {
             return redirect('/payment_failed')->with('error', 'Oops!, the amount charged is different from what you should pay.');
         }
 
