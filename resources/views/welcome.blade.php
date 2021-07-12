@@ -13,9 +13,9 @@
             <div class="banner-text">
                 <h2>Watch, earn and upload unlimited content</h2>
                 @auth
-                    <a href="{{route('home')}}" title="">Go To Dashboard</a>
+                <a href="{{route('home')}}" title="">Go To Dashboard</a>
                 @else
-                    <a href="{{route('register')}}" title="">Create my account</a>
+                <a href="{{route('register')}}" title="">Create my account</a>
                 @endauth
             </div><!--banner-text end-->
             {{-- <h3 class="headline">Video of the Day by <a href="#" title="">Admin</a></h3> --}}
@@ -32,6 +32,7 @@
                             <h3>Get paid watching videos</h3>
                             <p>Make money from the comfort of your home catching cruise with videos</p>
                         </div><!--service-col end-->
+                    </div>
                     <div class="col-lg-4 mx-lg-auto col-md-6 col-sm-6 col-12">
                         <div class="service-col">
                             <img src="{{asset('assets/images/sv4.png')}}" alt="">
