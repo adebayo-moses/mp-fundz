@@ -65,6 +65,7 @@ class VideoController extends Controller
             'exposure' => 'required',
             'point' => 'required',
             'views' => 'required',
+            'show_video_on' => 'required',
             'receive_views_from' => 'required',
             'daily_limit' => 'required',
         ]);
@@ -85,6 +86,7 @@ class VideoController extends Controller
             'title' => $request->input('title'),
             'user_id' => Auth::id(),
             'views' => $request->input('views'),
+            'show_video_on' => $request->input('show_video_on'),
             'published' => true,
             'exposure' => $request->input('exposure'),
             'point' => $request->input('point'),

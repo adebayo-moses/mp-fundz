@@ -59,7 +59,6 @@
                         <h2 class="title-hd">Coins </h2>
                         <div class="form_field pr">
                             <input id="point" type="text" name="point" placeholder="Eg: 4" class="form-control @error('point') is-invalid @enderror" name="point" value="{{ old('point') }}" required>
-
                             @error('point')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -144,7 +143,7 @@
 
             <div class="abt-tags">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-12">
+                    <div class="col-lg-3 col-md-3 col-12">
                         <h2 class="title-hd">Views </h2>
                         <div class="form_field pr">
                             <input id="views" type="text" name="views" placeholder="100000" class="form-control @error('views') is-invalid @enderror" name="views" value="{{ old('views') }}" required>
@@ -156,7 +155,36 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-12">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                        <div class="option">
+                            <h2 class="title-hd">Show Video On</h2>
+                            <div class="form_field">
+                                <select id="show_video_on" type="text" name="show_video_on" class="form-control @error('show_video_on') is-invalid @enderror" name="show_video_on" value="{{ old('show_video_on') }}" required>
+                                    <option value="basic">
+                                        Basic
+                                    </option>
+                                    <option value="contest">
+                                        Contest
+                                    </option>
+                                    <option value="both">
+                                        Both
+                                    </option>
+                                </select>
+
+                                @error('show_video_on')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                <a href="#" title="" class="arw_vz">
+                                    <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9394 7.51447L22.0607 9.63579L12 19.6964L1.93936 9.63579L4.06068 7.51447L12 15.4538L19.9394 7.51447Z" fill="#9494A0"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div><!--option end-->
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12">
                         <div class="option">
                             <h2 class="title-hd">Receive Views From: </h2>
                             <div class="form_field">
@@ -182,7 +210,7 @@
                         </div><!--option end-->
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-12">
+                    <div class="col-lg-3 col-md-3 col-12">
                         <h2 class="title-hd">Daily Visit Limit </h2>
                         <div class="form_field pr">
                             <input id="daily_limit" type="text" name="daily_limit" placeholder="1000" class="form-control @error('daily_limit') is-invalid @enderror" name="daily_limit" value="{{ old('daily_limit') }}" required>
