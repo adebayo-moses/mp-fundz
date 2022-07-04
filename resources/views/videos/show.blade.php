@@ -28,6 +28,7 @@
                     <h3 id="countdown" class="mb-4">Must play this video for <b><span id="played">0</span>/{{$video->exposure}} seconds to earn {{$video->point}} points</b></h3>
                     @endif
                     <div class="vid-1">
+                        {{-- <div class="spinner"></div> --}}
                         <div class="vid-pr">
                             <div id="player"  video_id="{{$video->video_id}}" exposure={{$video->exposure}} video="{{$video->id}}" watched={{$video->check_history}}></div>
                         </div><!--vid-pr end-->

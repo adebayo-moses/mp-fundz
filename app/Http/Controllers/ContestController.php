@@ -27,29 +27,51 @@ class ContestController extends Controller
         //Get current contest from trait
         $current_contest = $this->getCurrentContest();
 
-        //Get contest videos
-        $contest_videos = $this->getContestVideos();
 
+        $user = $this->getUser();
 
         if($current_contest !== null) {
             //There is an active contest
             if (!$current_contest->activate_payment) {
                 //No payment activated for the active contest
-                return view('contest.index')->with('contest_videos', $contest_videos);
+
+                //Attach user to contest
+                $current_contest->users()->attach($user->id);
+                return redirect()->route('contest.show_videos');
             }
 
             //Payment is activated
             //Before redirecting to the payment route, check if user has paid for this contest
-            $payment_record = $this->getPaymentRecord();
+            $result = $this->checkIfUserIsAttachedToContest();
 
-            if ($payment_record !== null) {
-                //payment found, go to contest page
-                return view('contest.index')->with('contest_videos', $contest_videos);
+            if ($result) {
+                //User is attached to this contest, go to contest page
+                return redirect()->route('contest.show_videos');
             }
 
-            //No payment found
-            //Redirect to the payment route
-            return redirect()->route('pay');
+            //User not attached to this contest //Check if user has sufficient coins
+
+            $user_coin_balance = $user->coin_balance;
+            //If user has sufficient coins, deduct the amount for the contest, attach user to contest, and go to contest
+            if($user_coin_balance >= '50.00') {
+                //User has sufficient coin balance // deduct it, and update coin balance in db
+                $updated_coin_balance = $user_coin_balance - '50.00';
+
+                $user->update([
+                    'coin_balance' => $updated_coin_balance
+                ]);
+
+                //Attach user to contest
+                $current_contest->users()->attach($user->id);
+
+                //Go to contest page
+                return redirect()->route('contest.show_videos');
+            }
+
+            //No sufficient coins at this point, go to the coin purchase page
+            return view('contest.purchase_coin');
+
+            // return redirect()->route('pay');
 
         } else {
 
@@ -64,6 +86,13 @@ class ContestController extends Controller
 
             return redirect()->back()->with('error', $error_text);
         }
+    }
+
+    public function show_videos() {
+        //Get contest videos
+        $contest_videos = $this->getContestVideos();
+
+        return view('contest.index')->with('contest_videos', $contest_videos);
     }
 
     public function show_video($id) {

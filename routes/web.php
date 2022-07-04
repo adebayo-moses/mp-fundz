@@ -85,9 +85,12 @@ Route::get('/contest/video/{id}', 'ContestController@show_video')->name('contest
 //Add entry
 Route::post('/contest/entry/add', 'ContestController@add_entry')->name('contest.add_entry')->middleware('paycheck');
 
+//Add entry
+Route::get('/contest/videos', 'ContestController@show_videos')->name('contest.show_videos')->middleware('paycheck');
+
 //Payment Integration
 // The route that the button calls to initialize payment
-Route::get('/pay', 'FlutterwaveController@initialize')->name('pay');
+Route::post('/pay', 'FlutterwaveController@initialize')->name('pay');
 // The callback url after a payment
 Route::get('/rave/callback', 'FlutterwaveController@callback')->name('callback');
 

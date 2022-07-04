@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Payment;
 use KingFlamez\Rave\Facades\Rave as Flutterwave;
 
-use App\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Traits\QueryTrait;
+use Illuminate\Http\Request;
 
 class FlutterwaveController extends Controller
 {
@@ -30,7 +30,7 @@ class FlutterwaveController extends Controller
      * Initialize Rave payment process
      * @return void
      */
-    public function initialize()
+    public function initialize(Request $request)
     {
         //Get the current contest
         //Get current contest from trait
@@ -39,17 +39,17 @@ class FlutterwaveController extends Controller
         // $tx = Transaction::where('tx_ref', 'flw_16175430136069bf65b6f06')->first();
 
         // dd($tx->status !== 'processing');
-        $user = User::find(Auth::id());
+        $user = $this->getUser();
 
         //This generates a payment reference
         $reference = Flutterwave::generateReference();
 
-        $amount = 300;
+        $amount = $request->amount;
 
         //Add the transaction in the db
         Payment::create([
             'tx_ref' => $reference,
-            'user_id' => Auth::id(),
+            'user_id' => $user->id,
             'contest_id' => $current_contest->id,
             'amount' => $amount,
         ]);
@@ -69,7 +69,7 @@ class FlutterwaveController extends Controller
             ],
 
             "customizations" => [
-                "title" => 'Contest Fee',
+                "title" => 'Contest Coin',
                 "description" => 'Purchased today, ' . Carbon::now()
             ]
         ];
@@ -102,11 +102,13 @@ class FlutterwaveController extends Controller
             // dd($data);
         } elseif ($status ==  'cancelled'){
             //Put desired action/code after transaction has been cancelled here
-            dd('Transaction cancelled...');
+            $this->updateProcessingTransaction('cancelled');
+            return redirect('home')->with('error', 'Transaction cancelled!');
         }
         else{
             //Put desired action/code after transaction has failed here
-            dd('Transaction failed...');
+            $this->updateProcessingTransaction('failed');
+            return redirect('home')->with('error', 'Transaction failed!');
         }
 
         // Get the transaction from your DB using the transaction reference (txref)
@@ -130,7 +132,7 @@ class FlutterwaveController extends Controller
 
         // Confirm that the db transaction amount is equal to the returned amount
         if($transaction->amount > $data['data']['charged_amount']) {
-            return redirect('/payment_failed')->with('error', 'Oops!, the amount charged is different from what you should pay.');
+            return redirect('/payment_failed')->with('error', 'Oops!, the amount charged is less than the amount you should pay.');
         }
 
         // Update the db transaction record (including parameters that didn't exist before the transaction is completed. for audit purpose)
@@ -139,23 +141,34 @@ class FlutterwaveController extends Controller
             'payment_type' => $payment_type
         ]);
 
-        // Give value for the transaction
-        //To give value in this case, just make the transaction status successful ( done below) and attach the user to the contest
+        // Give value for the transaction //Give coin
+        // $coin_value = '';
+        // $transaction->amount == 250 ? $coin_value = '50.00' : $coin_value = '100.00';
+        // //Get user
+        // $user = $this->getUser();
+        // $user->update([
+        //     'coin_balance' => $user->coin_balance + $coin_value
+        // ]);
 
-        $this->attachUserToContest();
+        //Get current contest from trait
+        $current_contest = $this->getCurrentContest();
+        //Get user from trait
+        $user = $this->getUser();
+        //Attach user to contest
+        $current_contest->users()->attach($user->id);
 
         // Update the transaction to note that you have given value for the transaction
         $transaction->update([
             'status' => 'success',
         ]);
 
-        // You can also redirect to your success page from here
-        return redirect('/payment_success')->with('success', 'Thank you for your purchase, good luck in your contest!');
+        // Return redirect to contest videos page
+        return redirect()->route('contest.show_videos');
 
     }
 
     public function payment_success() {
-        return redirect()->route('join_contest');
+        return redirect()->route('home')->with('success', 'Great! Coin purchase successful!');
     }
 
     public function payment_failed() {

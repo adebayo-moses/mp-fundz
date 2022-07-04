@@ -9,7 +9,9 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#demoModal').modal('show');
+        @if(!Auth::user()->is_user_join_contest)
+            $('#demoModal').modal('show');
+        @endif
     });
 </script>
 
@@ -24,9 +26,11 @@
                     <h2>Make &#8358;20, 000.00 instantly by watching videos </h2>
                 </li>
                 <li>
-                    <a href="{{ route('join_contest') }}">
-                        Join Now
-                    </a>
+                    @if (Auth::user()->is_user_join_contest)
+                        <a href="{{route('join_contest')}}">Go To Contest</a>
+                    @else
+                        <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Join Contest</a>
+                    @endif
                 </li>
             </ul><!--shr_links end-->
             <ul class="vid_thums">
@@ -116,7 +120,7 @@
                                         Do you know you can instantly make <b style="font-weight: bold;">N20, 000.00</b> by watching videos in the ongoing contest? The more videos you watch, the better your chances of winning. We have 3 sessions, the first session is between 09AM and 01PM, second session is between 02PM and 06PM, and the last session is between 07PM and 11PM.
                                         What are you still waiting for ? Kindly click on 'Get Started' below and take advantage of this fantastic opportunity!
                                     </p>
-                                    <a href="{{route('join_contest')}}" class="btn btn-default">Get Started</a>
+                                    <a href="{{route('join_contest')}}"  class="btn btn-default">Get Started (50 coins)</a>
 
                                 </div>
                             </div>

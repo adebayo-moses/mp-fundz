@@ -28,7 +28,7 @@ class CheckContestPayment
                 //The active contest has payment
 
                 //Get payment record
-                $payment_record = $this->getPaymentRecord();
+                $payment_record = $this->checkIfUserIsAttachedToContest();
 
                 if ($payment_record == null) {
                     //No payment found, redirect home

@@ -73,12 +73,6 @@
                                             <span>
                                                 <i class="icon-paid_sub"></i>
                                             </span>
-                                            <a href="{{route('join_contest')}}">Join Contest</a>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="icon-paid_sub"></i>
-                                            </span>
                                             <a href="{{route('user.account.withdraw')}}" title="">Withdraw Money</a>
                                         </li>
                                         <li>
@@ -100,7 +94,11 @@
                             </div>
                         </li>
                         <li>
-                            <a href="{{route('join_contest')}}" class="btn-default">Join Contest</a>
+                            @if (Auth::user()->is_user_join_contest)
+                                <a href="{{route('join_contest')}}" class="btn-default">Go To Contest</a>
+                            @else
+                                <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="btn-default">Join Contest</a>
+                            @endif
                         </li>
                         <li class="icon-menu-log">
                             <a href="#" title="" class="menu">
@@ -115,3 +113,23 @@
 
     @yield('contest')
 </header><!--header end-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Please Note</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            You'll need a total of 50 coins to join this contest. The moment you start, you'll be charged and you can't reverse the process!
+        </div>
+        <div class="modal-footer">
+            <a href="{{route('join_contest')}}" class="btn btn-sm text-white" style="background-color: #e06b20; border: none;">▲ Join Now (50 coins)</a>
+        </div>
+      </div>
+    </div>
+</div>

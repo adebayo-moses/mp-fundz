@@ -2,12 +2,16 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\Auth;
+
+use App\Http\Traits\QueryTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
+    use QueryTrait;
     use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use Notifiable;
 
@@ -122,7 +126,17 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
-    protected $appends = ['referral_link', 'total_coin_balance', 'amount_in_dollars', 'total_entry'];
+    protected $appends = ['referral_link', 'total_coin_balance', 'amount_in_dollars', 'total_entry', 'is_user_join_contest'];
+
+    public function getIsUserJoinContestAttribute() {
+
+        $current_contest = $this->getCurrentContest();
+        if($current_contest !== null) {
+            return $this->is_user_join_contest = $current_contest->users->contains('id', Auth::id());
+        }
+
+        return $this->is_user_join_contest = null;
+    }
 
     /**
      * Get the user's referral link.

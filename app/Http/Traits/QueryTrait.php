@@ -31,11 +31,12 @@ trait QueryTrait {
         return Contest::where('date', $current_date)->where('publish', 1)->where('end_time', '>' , $current_time)->orderBy('id', 'DESC')->first();
     }
 
-    public function getPaymentRecord() {
+    public function checkIfUserIsAttachedToContest() {
 
         $current_contest = $this->getCurrentContest();
 
-        return Payment::where('user_id', Auth::id())->where('contest_id', $current_contest->id)->where('status', 'success')->first();
+        return $current_contest->users->contains('id', Auth::id());
+        // return Payment::where('user_id', Auth::id())->where('contest_id', $current_contest->id)->where('status', 'success')->first();
     }
 
     public function getContestVideos() {
@@ -54,6 +55,18 @@ trait QueryTrait {
     public function getUser() {
 
         return User::find(Auth::id());
+    }
+
+    public function updateProcessingTransaction($value) {
+        $payment = Payment::where('user_id', $this->getUser()->id)->where('status', 'processing')->orderBy('created_at', 'DESC')->first();
+
+        if($payment !== null) {
+            $payment->update([
+                'status' => $value
+            ]);
+        }
+
+        return;
     }
 
 

@@ -21,15 +21,20 @@
     //    after the API code downloads.
     var player;
     function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        height,
-        width,
-        videoId,
-        events: {
-        'onStateChange': onYouTubePlayerStateChange
-        }
-    });
+        player = new YT.Player('player', {
+            height,
+            width,
+            videoId,
+            events: {
+            // 'onReady': onPlayerReady,
+            'onStateChange': onYouTubePlayerStateChange
+            }
+        });
     }
+
+    // function onPlayerReady() {
+    //     document.querySelector('.spinner').style.display = "none";
+    // }
 
     //When the state changes; e.g play
     var interval, playing= false, watchedVideo = playerElement.getAttribute("watched");
